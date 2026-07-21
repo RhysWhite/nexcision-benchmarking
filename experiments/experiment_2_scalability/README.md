@@ -2,7 +2,7 @@
 
 ## Research question
 
-How do NEXCISION runtime, peak memory and throughput scale with input size,
+How do NEXCISION runtime, peak memory, and throughput scale with input size,
 matrix shape, interval count, interval geometry and provenance reporting?
 
 ## Why this experiment is separate from Experiment 1
