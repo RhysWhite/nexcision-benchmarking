@@ -1,0 +1,22 @@
+Processing ./software/nexcision-0.1.0-py3-none-any.whl
+Installing collected packages: nexcision
+Successfully installed nexcision-0.1.0
+System information written to: experiments/experiment_2_scalability/results/pilot/system_info-2432141.json
+Detected platform: Linux x86_64
+Free storage at repository: 3550.0 GiB
+{"actual_intervals": 10, "actual_removal_fraction": 0.1, "case_id": "pilot_small", "expected_removed_rows": 2000, "expected_retained_rows": 18000, "geometry": "disjoint", "input_bytes": 844586, "regions_bytes": 226, "requested_intervals": 10, "requested_removal_fraction": 0.1, "sites": 20000, "taxa": 16}
+{"actual_intervals": 100, "actual_removal_fraction": 0.1, "case_id": "pilot_medium", "expected_removed_rows": 4000, "expected_retained_rows": 36000, "geometry": "disjoint", "input_bytes": 10666491, "regions_bytes": 2407, "requested_intervals": 100, "requested_removal_fraction": 0.1, "sites": 40000, "taxa": 128}
+{"actual_intervals": 100, "actual_removal_fraction": 0.10008, "case_id": "pilot_wide", "expected_removed_rows": 5004, "expected_retained_rows": 44996, "geometry": "overlapping", "input_bytes": 51743019, "regions_bytes": 2407, "requested_intervals": 100, "requested_removal_fraction": 0.1, "sites": 50000, "taxa": 512}
+[1/9] PASS pilot_small repeat 2: 0.0834 s, 22.9 MiB
+[2/9] PASS pilot_small repeat 3: 0.0791 s, 23.0 MiB
+[3/9] PASS pilot_medium repeat 3: 0.1326 s, 69.9 MiB
+[4/9] PASS pilot_wide repeat 2: 0.3652 s, 256.4 MiB
+[5/9] PASS pilot_medium repeat 2: 0.1339 s, 69.9 MiB
+[6/9] PASS pilot_medium repeat 1: 0.1317 s, 70.0 MiB
+[7/9] PASS pilot_small repeat 1: 0.0812 s, 22.7 MiB
+[8/9] PASS pilot_wide repeat 1: 0.3642 s, 256.2 MiB
+[9/9] PASS pilot_wide repeat 3: 0.3661 s, 256.0 MiB
+Pilot complete: 9/9 runs correct
+Results written to: experiments/experiment_2_scalability/results/pilot/pilot_results-2432141.tsv
+Experiment 2 pilot completed on kscprod-bio1.esr.cri.nz
+Results copied to /home/rwhite/github/nexcision-benchmarking/experiments/experiment_2_scalability/results/pilot
