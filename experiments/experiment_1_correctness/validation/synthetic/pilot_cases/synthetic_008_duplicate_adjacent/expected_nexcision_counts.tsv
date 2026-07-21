@@ -1,0 +1,4 @@
+region_id	region_name	start	end	removed_rows
+1	duplicate_A	115	135	2
+2	duplicate_B	115	135	2
+3	adjacent	136	165	3

@@ -1,0 +1,5 @@
+region_id	region_name	start	end	removed_rows
+1	late	280	315	3
+2	early	120	155	3
+3	no_match	500	550	0
+4	middle	190	245	5

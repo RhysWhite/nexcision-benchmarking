@@ -1,0 +1,26 @@
+#NEXUS
+begin data;
+dimensions ntax=12 nchar=18;
+format symbols="AGCT" gap=. transpose;
+taxlabels sample_001 sample_002 sample_003 sample_004 sample_005 sample_006 sample_007 sample_008 sample_009 sample_010 sample_011 sample_012;
+matrix
+SYNTHREF_1_100	A G G T G G C T A G C C
+SYNTHREF_1_113	G T A C G C T T T T A C
+SYNTHREF_1_126	T A A G C G T T T T T A
+SYNTHREF_1_139	T G G A C C C G T G G T
+SYNTHREF_1_152	T A G A G T A G T G C T
+SYNTHREF_1_165	C C A G A C T C C T C A
+SYNTHREF_1_178	T G A C T A G C T C G C
+SYNTHREF_1_191	T A T T C C T G T C A G
+SYNTHREF_1_204	A G G G A A T T T G C C
+SYNTHREF_1_217	T G A G A A C G A T C C
+SYNTHREF_1_230	T A C C G A C T G T T C
+SYNTHREF_1_243	A G T G C A A A G A A G
+SYNTHREF_1_256	C T G C A T C A T T G T
+SYNTHREF_1_269	C T C G C C A T T A A C
+SYNTHREF_1_282	T G A A A G C T G T G T
+SYNTHREF_1_295	A G T T G T G T C T C T
+SYNTHREF_1_308	C G T A A T T A C T A G
+SYNTHREF_1_321	T G T C T C G T C C C G
+;
+end;

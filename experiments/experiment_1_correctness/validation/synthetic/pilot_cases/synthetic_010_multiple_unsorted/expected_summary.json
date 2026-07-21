@@ -1,0 +1,6 @@
+{
+  "expected_rows_removed": 11,
+  "expected_rows_retained": 7,
+  "matrix_rows_read": 18,
+  "regions_loaded": 4
+}

@@ -1,0 +1,17 @@
+#NEXUS
+begin data;
+dimensions ntax=2 nchar=9;
+format symbols="AGCT" gap=. transpose;
+taxlabels sample_001 sample_002;
+matrix
+SYNTHREF_1_1000	C	A
+SYNTHREF_1_900	A	C
+SYNTHREF_1_800	A	T
+SYNTHREF_1_700	C	A
+SYNTHREF_1_600	T	G
+SYNTHREF_1_500	T	G
+SYNTHREF_1_400	T	C
+SYNTHREF_1_300	A	C
+SYNTHREF_1_200	A	T
+;
+end;
