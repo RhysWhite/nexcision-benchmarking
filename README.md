@@ -115,7 +115,28 @@ Publication figures, tables and supplementary material will be generated from ve
 
 ## Funding and affiliation
 
-Development and evaluation of NEXCISION were supported by **Genomics Aotearoa** and undertaken at **Public Health and Forensic Science (PHF Science), Aotearoa New Zealand**.
+<p align="center">
+  <a href="https://www.genomics-aotearoa.org.nz/">
+    <img
+      src="assets/genomics-aotearoa-logo.png"
+      alt="Genomics Aotearoa"
+      height="80">
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.phfscience.nz/">
+    <img
+      src="assets/phf-science-logo.png"
+      alt="PHF Science"
+      height="80">
+  </a>
+</p>
+
+<p align="center">
+  Development of NEXCISION was supported by
+  <strong>Genomics Aotearoa</strong> and undertaken at
+  <strong>Public Health and Forensic Science (PHF Science),
+  Aotearoa New Zealand</strong>.
+</p>
 
 ## Citation
 
