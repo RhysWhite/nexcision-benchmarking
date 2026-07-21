@@ -46,7 +46,18 @@ executions, and copies only compact results back to the repository.
 
 ## Formal run
 
-The formal manifest and Slurm script will be frozen only after the pilot has
-passed on `kscprod-bio1`. For the final manuscript run, add `#SBATCH --exclusive`
-only after confirming that whole-node reservations are acceptable on the
-`prod` partition.
+The pilot passed and exclusive allocation was confirmed on `kscprod-bio1`.
+The frozen design is documented in
+[`FORMAL_BENCHMARK_PROTOCOL.md`](FORMAL_BENCHMARK_PROTOCOL.md).
+
+Run the formal-runner smoke test first:
+
+```bash
+sbatch experiments/experiment_2_scalability/scripts/run_formal_smoke.slurm
+```
+
+Then submit the exclusive-node formal benchmark:
+
+```bash
+sbatch experiments/experiment_2_scalability/scripts/run_formal.slurm
+```
