@@ -1,0 +1,2 @@
+case_id	purpose	default_exit_code	allow_empty_rows_removed
+case_012_all_sites_requires_allow_empty	prevent accidental empty matrix and validate explicit override	2	6

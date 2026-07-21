@@ -1,0 +1,18 @@
+case_id	purpose	regions	expected_removed_rows	expected_removed_labels
+case_001_single_site	ordinary single-site interval	175–185	1	CP013831_180
+case_002_start_boundary	coordinate exactly on inclusive start boundary	180–185	1	CP013831_180
+case_003_end_boundary	coordinate exactly on inclusive end boundary	175–180	1	CP013831_180
+case_004_below_start	coordinate one base below inclusive start boundary	180–185	0	none
+case_005_above_end	coordinate one base above inclusive end boundary	175–180	0	none
+case_006_overlapping_regions	overlapping regions with independent counts	175–185;180–195	2	CP013831_180;CP013831_190
+case_007_duplicate_regions	duplicate intervals with independent counts	175–185;175–185	1	CP013831_180
+case_008_adjacent_regions	adjacent intervals without overlap	175–185;186–195	2	CP013831_180;CP013831_190
+case_009_reversed_coordinates	descending bounds normalised safely	185–175	1	CP013831_180
+case_010_unsorted_regions	out-of-order intervals filter correctly and counts preserve input order	195–205;155–165;175–185	3	CP013831_160;CP013831_180;CP013831_200
+case_011_no_match	valid interval containing no observed coordinates	1–100	0	none
+case_013_comments_blank_lines	whole-line comments and blank lines are preserved	175–185	1	CP013831_180
+case_014_space_separated_states	variable space-separated states and indentation are preserved	175–185	1	CP013831_180
+case_015_tab_separated_states	tab-separated SPANDx-style states are preserved	175–185	1	CP013831_180
+case_016_mixed_case_commands	mixed NEXUS command capitalisation and dimension spacing are preserved	175–185	1	CP013831_180
+case_017_inline_terminator_retained	inline semicolon is preserved on retained final row	175–185	1	CP013831_180
+case_018_inline_terminator_removed	matrix remains terminated when inline final row is removed	215–225	1	CP013831_220

@@ -1,0 +1,27 @@
+case_id	purpose	expected_result
+invalid_001_missing_matrix	missing MATRIX command	exit 2; no outputs
+invalid_002_multiple_matrices	multiple MATRIX blocks	exit 2; no outputs
+invalid_003_unterminated_matrix	MATRIX lacks terminating semicolon	exit 2; no outputs
+invalid_004_end_before_terminator	enclosing block ends before MATRIX terminator	exit 2; no outputs
+invalid_005_no_coordinate_rows	MATRIX contains no coordinate-labelled rows	exit 2; no outputs
+invalid_006_unparseable_row	matrix row does not match coordinate pattern	exit 2; no outputs
+invalid_007_interleaved_matrix	unsupported interleaved continuation row	exit 2; no outputs
+invalid_008_empty_regions	empty regions file	exit 2; no outputs
+invalid_009_header_only_regions	regions file contains only header	exit 2; no outputs
+invalid_010_missing_end	region row has one field	exit 2; no outputs
+invalid_011_noninteger_region	region coordinate is non-integer	exit 2; no outputs
+invalid_012_zero_region	region coordinate is zero	exit 2; no outputs
+invalid_013_negative_region	region coordinate is negative	exit 2; no outputs
+invalid_014_invalid_regex	syntactically invalid coordinate regex	exit 2; no outputs
+invalid_015_regex_no_group	coordinate regex lacks capture group	exit 2; no outputs
+invalid_016_regex_two_groups	coordinate regex has two capture groups	exit 2; no outputs
+invalid_017_missing_nexus	NEXUS file does not exist	exit 2; no outputs
+invalid_018_missing_regions	regions file does not exist	exit 2; no outputs
+invalid_019_invalid_utf8_nexus	NEXUS file is not valid UTF-8	exit 2; no outputs
+invalid_020_invalid_utf8_regions	regions file is not valid UTF-8	exit 2; no outputs
+invalid_021_output_equals_input	output would overwrite input	exit 2; input unchanged
+invalid_022_duplicate_outputs	two output paths are identical	exit 2; no outputs
+invalid_023_existing_output	existing output without --force	exit 2; existing file unchanged
+invalid_024_output_is_directory	output path is a directory	exit 2; directory unchanged
+invalid_025_parent_is_file	output parent path is a file	exit 2; no partial outputs
+invalid_026_nested_outputs	one output path is nested beneath another	exit 2; no partial outputs

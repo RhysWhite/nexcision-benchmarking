@@ -1,0 +1,67 @@
+{
+  "acceptance_criteria_met": true,
+  "all_sites_safety_cases": {
+    "cases": 1,
+    "passed": 1
+  },
+  "environment": {
+    "platform": "Linux-4.4.0-x86_64-with-glibc2.41",
+    "python": "3.13.5"
+  },
+  "experiment": "NEXCISION Experiment 1: formal correctness validation",
+  "fixed_correctness_and_preservation_cases": {
+    "cases": 17,
+    "passed": 17
+  },
+  "key_result_checksums": {
+    "malformed_input_results_tsv": "916846bb25ae92b4f0dc3b68f0505becc32a1239120a17c54fb35e8a44f75f2e",
+    "mutation_results_tsv": "2525404255891453bd1f2db328d6fa736b289c5fafeb2ae2a0790e5379a7cc86",
+    "property_results_tsv": "675c4980c2dbfe7ad065fbde50a0e9cba090bfee00b0ff0f9ea1c38817687e95",
+    "real_file_sanity_checks_tsv": "e7cb159c3c91d7bd57095d731c3674da3f29994edabf12b1afd87ac4751edcf9",
+    "synthetic_1000_results_tsv": "b737e66915223b3d5cc3fa2dad80de8b166df9418cb38b5401f753c52a8f10e4"
+  },
+  "malformed_input_and_output_safety_cases": {
+    "cases": 26,
+    "passed": 26
+  },
+  "mutation_testing": {
+    "mutants": 12,
+    "mutants_killed": 12,
+    "mutants_survived": 0,
+    "mutation_score_percent": 100.0
+  },
+  "property_based_validation": {
+    "configured_generated_examples": 1800,
+    "fixed_regressions": 1,
+    "fixed_regressions_passed": 1,
+    "hypothesis_version": "6.158.0",
+    "properties": 9,
+    "properties_passed": 9
+  },
+  "real_spandx_matrices": {
+    "checks": 6,
+    "checks_passed": 6,
+    "files": 3
+  },
+  "software_version": "0.1.0",
+  "status": "PASS",
+  "synthetic_corpus": {
+    "cases": 1000,
+    "corpus_tree_sha256": "9ed25d7e2dd4fee380f2f0f32ddcf653694715926905bd54179e7003e64f1c28",
+    "maximum_sites": 1000,
+    "maximum_taxa": 256,
+    "minimum_sites": 20,
+    "minimum_taxa": 2,
+    "passed": 1000,
+    "rows_removed": 113740,
+    "rows_retained": 190260,
+    "scenario_families": 10,
+    "tested_mode": "installed wheel; in-process public core API",
+    "total_site_rows": 304000
+  },
+  "unit_tests": {
+    "passed": 26,
+    "tests": 26
+  },
+  "validation_date": "2026-07-21"
+}

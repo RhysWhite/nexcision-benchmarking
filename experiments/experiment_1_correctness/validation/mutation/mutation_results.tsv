@@ -1,0 +1,13 @@
+mutation_id	description	status	probe_exit_code	detected_by
+M01_START_EXCLUSIVE	Treat an interval start coordinate as outside the interval.	KILLED	1	AssertionError
+M02_END_EXCLUSIVE	Treat an interval end coordinate as outside the interval.	KILLED	1	AssertionError
+M03_UPDATE_NTAX	Update ntax rather than nchar for a transposed matrix.	KILLED	1	AssertionError
+M04_DO_NOT_SORT_REGIONS	Process regions in submitted order without sorting them.	KILLED	1	AssertionError
+M05_DISCARD_OVERLAP_EXTENSION	Fail to extend a merged interval to the later overlapping endpoint.	KILLED	1	AssertionError
+M06_ONLY_FIRST_REGION	Ignore every exclusion interval except the first after sorting.	KILLED	1	AssertionError
+M07_FIRST_INTEGER_IN_LABEL	Extract the first integer in a row label instead of the requested terminal coordinate.	KILLED	1	AssertionError
+M08_REVERSE_RETAINED_ROWS	Insert retained rows at the start of the matrix and reverse their order.	KILLED	1	AssertionError
+M09_DROP_INLINE_TERMINATOR	Remove the final inline row without restoring the MATRIX semicolon.	KILLED	1	AssertionError
+M10_DISABLE_EMPTY_SAFETY	Allow all matrix rows to be removed without --allow-empty.	KILLED	1	AssertionError: All-sites safety was disabled
+M11_DEDUPLICATE_REMOVED_COORDINATES	Count duplicate-coordinate rows only once in regional counts.	KILLED	1	AssertionError
+M12_TOTAL_COUNT_FOR_EVERY_REGION	Report the total number removed for every individual region.	KILLED	1	AssertionError

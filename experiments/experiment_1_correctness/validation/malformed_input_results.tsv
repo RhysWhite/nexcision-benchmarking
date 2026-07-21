@@ -1,0 +1,27 @@
+case_id	purpose	expected_exit_code	observed_exit_code	error_check	stdout_empty	inputs_preserved	no_unintended_outputs	temporary_files_removed	overall
+invalid_001_missing_matrix	missing MATRIX command	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_002_multiple_matrices	multiple MATRIX blocks	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_003_unterminated_matrix	MATRIX lacks terminating semicolon	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_004_end_before_terminator	enclosing block ends before MATRIX	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_005_no_coordinate_rows	MATRIX contains no coordinate-labelled rows	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_006_unparseable_row	matrix row does not match coordinate pattern	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_007_interleaved_matrix	unsupported interleaved continuation row	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_008_empty_regions	empty regions file	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_009_header_only_regions	regions file contains only header	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_010_missing_end	region row has one field	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_011_noninteger_region	region coordinate is non-integer	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_012_zero_region	region coordinate is zero	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_013_negative_region	region coordinate is negative	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_014_invalid_regex	syntactically invalid coordinate regex	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_015_regex_no_group	coordinate regex lacks capture group	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_016_regex_two_groups	coordinate regex has two capture groups	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_017_missing_nexus	NEXUS file does not exist	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_018_missing_regions	regions file does not exist	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_019_invalid_utf8_nexus	NEXUS file is not valid UTF-8	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_020_invalid_utf8_regions	regions file is not valid UTF-8	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_021_output_equals_input	output would overwrite input	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_022_duplicate_outputs	two output paths are identical	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_023_existing_output	existing output without --force	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_024_output_is_directory	output path is a directory	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_025_parent_is_file	output parent path is a file	2	2	PASS	PASS	PASS	PASS	PASS	PASS
+invalid_026_nested_outputs	one output path is nested beneath another	2	2	PASS	PASS	PASS	PASS	PASS	PASS

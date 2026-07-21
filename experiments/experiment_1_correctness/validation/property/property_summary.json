@@ -1,0 +1,12 @@
+{
+  "configured_generated_examples": 1800,
+  "deterministic_generation": true,
+  "fixed_regressions": 1,
+  "fixed_regressions_passed": 1,
+  "hypothesis_database_disabled": true,
+  "hypothesis_version": "6.158.0",
+  "nexcision_version": "0.1.0",
+  "properties": 9,
+  "properties_passed": 9,
+  "wall_seconds": 3.3424993839998933
+}

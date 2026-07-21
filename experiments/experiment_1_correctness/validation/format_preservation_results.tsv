@@ -1,0 +1,7 @@
+case_id	feature	expected_removed_label	retained_text_preserved	dimension_correct	oracle_agreement	result
+case_013_comments_blank_lines	whole-line comments and blank lines	CP013831_180	yes	yes	yes	PASS
+case_014_space_separated_states	variable space-separated states and indentation	CP013831_180	yes	yes	yes	PASS
+case_015_tab_separated_states	tab-separated SPANDx-style states	CP013831_180	yes	yes	yes	PASS
+case_016_mixed_case_commands	mixed NEXUS command capitalisation and dimension spacing	CP013831_180	yes	yes	yes	PASS
+case_017_inline_terminator_retained	inline semicolon on retained final row	CP013831_180	yes	yes	yes	PASS
+case_018_inline_terminator_removed	inline semicolon on removed final row	CP013831_220	yes	yes	yes	PASS

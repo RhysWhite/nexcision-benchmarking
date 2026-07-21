@@ -1,0 +1,7 @@
+case	file	ntax	nchar_before	interval	removed_count	removed_labels	nchar_after	retained_exact	taxlabels_exact	suffix_exact	states_per_row_valid
+oxa_single_site	47_ST131_OXA48.nex	47	266	14268-14268	1	18AR0845_1_14268	265	True	True	True	True
+oxa_short_interval	47_ST131_OXA48.nex	47	266	48000-50000	2	18AR0845_1_48403;18AR0845_1_49380	264	True	True	True	True
+cladec_single_site	237_ST131_CladeC.nex	237	4649	95-95	1	HG941718_95	4648	True	True	True	True
+cladec_short_interval	237_ST131_CladeC.nex	237	4649	95-1095	5	HG941718_95;HG941718_96;HG941718_498;HG941718_801;HG941718_810	4644	True	True	True	True
+mrsa_single_site	396_MRSA_AK3.nex	396	10481	251-251	1	sa230905_barcode06_1_251	10480	True	True	True	True
+mrsa_short_interval	396_MRSA_AK3.nex	396	10481	251-1251	3	sa230905_barcode06_1_251;sa230905_barcode06_1_311;sa230905_barcode06_1_408	10478	True	True	True	True
