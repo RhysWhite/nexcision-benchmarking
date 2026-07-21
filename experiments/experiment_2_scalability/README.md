@@ -2,7 +2,7 @@
 
 ## Research question
 
-How do NEXCISION runtime, peak memory, and throughput scale with input size,
+How do NEXCISION runtime, peak memory and throughput scale with input size,
 matrix shape, interval count, interval geometry and provenance reporting?
 
 ## Why this experiment is separate from Experiment 1
@@ -44,7 +44,8 @@ Pilot results are not manuscript performance results.
 
 ### Stage 2B — formal benchmark
 
-After the pilot is approved, the final benchmark will separately examine:
+The pilot passed on `kscprod-bio1` (9/9 executions correct). The frozen formal
+design now separately examines:
 
 1. **Input-size scaling** at a fixed interval count and removal fraction.
 2. **Matrix-shape scaling** at approximately matched input sizes.
@@ -52,8 +53,10 @@ After the pilot is approved, the final benchmark will separately examine:
 4. **Interval geometry**: disjoint, adjacent, overlapping and nested.
 5. **Provenance overhead**: runs with and without `--report`.
 
-Each formal configuration will be repeated five times in randomized order on a
-single controlled machine or reserved compute node.
+Each formal configuration receives one unreported warm-up followed by five
+measured repetitions in randomized order on an exclusive allocation of the
+fixed node `kscprod-bio1`. See
+[`FORMAL_BENCHMARK_PROTOCOL.md`](FORMAL_BENCHMARK_PROTOCOL.md).
 
 ## Benchmark-machine rules
 
@@ -107,3 +110,24 @@ Do not commit:
 
 Frozen raw benchmark outputs should be archived with a release or research-data
 deposit if they are required for the manuscript record.
+
+## Formal execution
+
+First test the new formal runner with tiny matrices:
+
+```bash
+sbatch experiments/experiment_2_scalability/scripts/run_formal_smoke.slurm
+```
+
+After the smoke test passes, submit the frozen 21-configuration benchmark:
+
+```bash
+sbatch experiments/experiment_2_scalability/scripts/run_formal.slurm
+```
+
+Preview exact generated input sizes without creating the matrices:
+
+```bash
+python3 experiments/experiment_2_scalability/scripts/preview_formal_manifest.py \
+  --manifest experiments/experiment_2_scalability/configs/formal_manifest.tsv
+```
