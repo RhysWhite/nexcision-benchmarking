@@ -1,0 +1,3 @@
+series	case_id	taxa	sites	intervals	geometry	removal_fraction	with_report	warmups	repeats	design_note
+smoke	smoke_small	16	2000	10	disjoint	0.10	false	1	2	Small test of the formal runner
+smoke	smoke_report	32	3000	20	overlapping	0.10	true	1	2	Small report-enabled test

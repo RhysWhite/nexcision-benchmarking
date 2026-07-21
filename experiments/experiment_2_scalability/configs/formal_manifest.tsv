@@ -1,0 +1,22 @@
+series	case_id	taxa	sites	intervals	geometry	removal_fraction	with_report	warmups	repeats	design_note
+input_size	size_010mb	512	10000	100	disjoint	0.10	false	1	5	Approx. 10 MB input
+input_size	size_100mb	512	100000	100	disjoint	0.10	false	1	5	Approx. 100 MB input
+input_size	size_500mb	512	500000	100	disjoint	0.10	false	1	5	Approx. 500 MB input
+input_size	size_1gb	512	1000000	100	disjoint	0.10	false	1	5	Approx. 1 GB input
+input_size	size_2gb	512	2000000	100	disjoint	0.10	false	1	5	Approx. 2 GB input
+input_size	size_5gb	512	5000000	100	disjoint	0.10	false	1	5	Approx. 5 GB input
+matrix_shape	shape_tall	64	3500000	100	disjoint	0.10	false	1	5	Many short rows; approx. 500 MB
+matrix_shape	shape_balanced	512	500000	100	disjoint	0.10	false	1	5	Intermediate rows and columns; approx. 500 MB
+matrix_shape	shape_wide	8192	32000	100	disjoint	0.10	false	1	5	Fewer very wide rows; approx. 500 MB
+interval_count	intervals_000001	512	1000000	1	disjoint	0.10	false	1	5	One interval
+interval_count	intervals_000010	512	1000000	10	disjoint	0.10	false	1	5	Ten intervals
+interval_count	intervals_000100	512	1000000	100	disjoint	0.10	false	1	5	One hundred intervals
+interval_count	intervals_001000	512	1000000	1000	disjoint	0.10	false	1	5	One thousand intervals
+interval_count	intervals_010000	512	1000000	10000	disjoint	0.10	false	1	5	Ten thousand intervals
+interval_count	intervals_100000	512	1000000	100000	disjoint	0.10	false	1	5	One hundred thousand intervals
+interval_geometry	geometry_disjoint	512	1000000	10000	disjoint	0.10	false	1	5	Disjoint intervals
+interval_geometry	geometry_adjacent	512	1000000	10000	adjacent	0.10	false	1	5	Adjacent intervals
+interval_geometry	geometry_overlapping	512	1000000	10000	overlapping	0.10	false	1	5	Partially overlapping intervals
+interval_geometry	geometry_nested	512	1000000	10000	nested	0.10	false	1	5	Nested intervals
+provenance	report_off	512	1000000	100	disjoint	0.10	false	1	5	Provenance report disabled
+provenance	report_on	512	1000000	100	disjoint	0.10	true	1	5	Provenance report enabled
