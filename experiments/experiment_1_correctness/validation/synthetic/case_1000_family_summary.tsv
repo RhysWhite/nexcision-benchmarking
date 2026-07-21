@@ -1,0 +1,11 @@
+family	cases	site_rows	rows_removed	rows_retained	maximum_taxa	maximum_sites	all_passed
+basic_single	100	30400	6180	24220	256	1000	PASS
+descending_rows	100	30400	15300	15100	256	1000	PASS
+duplicate_adjacent	100	30400	10755	19645	256	1000	PASS
+multiple_unsorted	100	30400	13995	16405	256	1000	PASS
+nested_threeway	100	30400	22915	7485	256	1000	PASS
+no_match	100	30400	0	30400	256	1000	PASS
+overlapping	100	30400	15300	15100	256	1000	PASS
+reversed_interval	100	30400	12260	18140	256	1000	PASS
+shuffled_rows	100	30400	10755	19645	256	1000	PASS
+two_disjoint	100	30400	6280	24120	256	1000	PASS

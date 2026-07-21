@@ -1,0 +1,101 @@
+case_id	family	description	seed	ntax	nchar	interval_count	row_order	interval_geometry	separator	expected_removed	expected_retained	removal_fraction
+synthetic_001_basic_single_01	basic_single	One ordinary interval.	20260722	2	20	1	ascending	basic_single	tab	5	15	0.2500
+synthetic_002_basic_single_02	basic_single	One ordinary interval.	20260723	4	30	1	ascending	basic_single	space	7	23	0.2333
+synthetic_003_basic_single_03	basic_single	One ordinary interval.	20260724	8	40	1	ascending	basic_single	tab	9	31	0.2250
+synthetic_004_basic_single_04	basic_single	One ordinary interval.	20260725	12	60	1	ascending	basic_single	space	13	47	0.2167
+synthetic_005_basic_single_05	basic_single	One ordinary interval.	20260726	16	80	1	ascending	basic_single	tab	17	63	0.2125
+synthetic_006_basic_single_06	basic_single	One ordinary interval.	20260727	24	100	1	ascending	basic_single	space	21	79	0.2100
+synthetic_007_basic_single_07	basic_single	One ordinary interval.	20260728	32	150	1	ascending	basic_single	tab	31	119	0.2067
+synthetic_008_basic_single_08	basic_single	One ordinary interval.	20260729	48	200	1	ascending	basic_single	space	41	159	0.2050
+synthetic_009_basic_single_09	basic_single	One ordinary interval.	20260730	64	300	1	ascending	basic_single	tab	61	239	0.2033
+synthetic_010_basic_single_10	basic_single	One ordinary interval.	20260731	96	500	1	ascending	basic_single	space	101	399	0.2020
+synthetic_011_two_disjoint_01	two_disjoint	Two disjoint intervals.	20261722	2	20	2	ascending	two_disjoint	tab	6	14	0.3000
+synthetic_012_two_disjoint_02	two_disjoint	Two disjoint intervals.	20261723	4	30	2	ascending	two_disjoint	space	8	22	0.2667
+synthetic_013_two_disjoint_03	two_disjoint	Two disjoint intervals.	20261724	8	40	2	ascending	two_disjoint	tab	10	30	0.2500
+synthetic_014_two_disjoint_04	two_disjoint	Two disjoint intervals.	20261725	12	60	2	ascending	two_disjoint	space	14	46	0.2333
+synthetic_015_two_disjoint_05	two_disjoint	Two disjoint intervals.	20261726	16	80	2	ascending	two_disjoint	tab	18	62	0.2250
+synthetic_016_two_disjoint_06	two_disjoint	Two disjoint intervals.	20261727	24	100	2	ascending	two_disjoint	space	22	78	0.2200
+synthetic_017_two_disjoint_07	two_disjoint	Two disjoint intervals.	20261728	32	150	2	ascending	two_disjoint	tab	32	118	0.2133
+synthetic_018_two_disjoint_08	two_disjoint	Two disjoint intervals.	20261729	48	200	2	ascending	two_disjoint	space	42	158	0.2100
+synthetic_019_two_disjoint_09	two_disjoint	Two disjoint intervals.	20261730	64	300	2	ascending	two_disjoint	tab	62	238	0.2067
+synthetic_020_two_disjoint_10	two_disjoint	Two disjoint intervals.	20261731	96	500	2	ascending	two_disjoint	space	102	398	0.2040
+synthetic_021_overlapping_01	overlapping	Two overlapping intervals with independent counts.	20262722	2	20	2	ascending	overlapping	tab	11	9	0.5500
+synthetic_022_overlapping_02	overlapping	Two overlapping intervals with independent counts.	20262723	4	30	2	ascending	overlapping	space	16	14	0.5333
+synthetic_023_overlapping_03	overlapping	Two overlapping intervals with independent counts.	20262724	8	40	2	ascending	overlapping	tab	21	19	0.5250
+synthetic_024_overlapping_04	overlapping	Two overlapping intervals with independent counts.	20262725	12	60	2	ascending	overlapping	space	31	29	0.5167
+synthetic_025_overlapping_05	overlapping	Two overlapping intervals with independent counts.	20262726	16	80	2	ascending	overlapping	tab	41	39	0.5125
+synthetic_026_overlapping_06	overlapping	Two overlapping intervals with independent counts.	20262727	24	100	2	ascending	overlapping	space	51	49	0.5100
+synthetic_027_overlapping_07	overlapping	Two overlapping intervals with independent counts.	20262728	32	150	2	ascending	overlapping	tab	76	74	0.5067
+synthetic_028_overlapping_08	overlapping	Two overlapping intervals with independent counts.	20262729	48	200	2	ascending	overlapping	space	101	99	0.5050
+synthetic_029_overlapping_09	overlapping	Two overlapping intervals with independent counts.	20262730	64	300	2	ascending	overlapping	tab	151	149	0.5033
+synthetic_030_overlapping_10	overlapping	Two overlapping intervals with independent counts.	20262731	96	500	2	ascending	overlapping	space	251	249	0.5020
+synthetic_031_shuffled_rows_01	shuffled_rows	Shuffled matrix rows with retained-order preservation.	20263722	2	20	1	shuffled	shuffled_rows	tab	8	12	0.4000
+synthetic_032_shuffled_rows_02	shuffled_rows	Shuffled matrix rows with retained-order preservation.	20263723	4	30	1	shuffled	shuffled_rows	space	12	18	0.4000
+synthetic_033_shuffled_rows_03	shuffled_rows	Shuffled matrix rows with retained-order preservation.	20263724	8	40	1	shuffled	shuffled_rows	tab	15	25	0.3750
+synthetic_034_shuffled_rows_04	shuffled_rows	Shuffled matrix rows with retained-order preservation.	20263725	12	60	1	shuffled	shuffled_rows	space	22	38	0.3667
+synthetic_035_shuffled_rows_05	shuffled_rows	Shuffled matrix rows with retained-order preservation.	20263726	16	80	1	shuffled	shuffled_rows	tab	29	51	0.3625
+synthetic_036_shuffled_rows_06	shuffled_rows	Shuffled matrix rows with retained-order preservation.	20263727	24	100	1	shuffled	shuffled_rows	space	36	64	0.3600
+synthetic_037_shuffled_rows_07	shuffled_rows	Shuffled matrix rows with retained-order preservation.	20263728	32	150	1	shuffled	shuffled_rows	tab	54	96	0.3600
+synthetic_038_shuffled_rows_08	shuffled_rows	Shuffled matrix rows with retained-order preservation.	20263729	48	200	1	shuffled	shuffled_rows	space	71	129	0.3550
+synthetic_039_shuffled_rows_09	shuffled_rows	Shuffled matrix rows with retained-order preservation.	20263730	64	300	1	shuffled	shuffled_rows	tab	106	194	0.3533
+synthetic_040_shuffled_rows_10	shuffled_rows	Shuffled matrix rows with retained-order preservation.	20263731	96	500	1	shuffled	shuffled_rows	space	176	324	0.3520
+synthetic_041_descending_rows_01	descending_rows	Coordinates in descending matrix order.	20264722	2	20	1	descending	descending_rows	tab	11	9	0.5500
+synthetic_042_descending_rows_02	descending_rows	Coordinates in descending matrix order.	20264723	4	30	1	descending	descending_rows	space	16	14	0.5333
+synthetic_043_descending_rows_03	descending_rows	Coordinates in descending matrix order.	20264724	8	40	1	descending	descending_rows	tab	21	19	0.5250
+synthetic_044_descending_rows_04	descending_rows	Coordinates in descending matrix order.	20264725	12	60	1	descending	descending_rows	space	31	29	0.5167
+synthetic_045_descending_rows_05	descending_rows	Coordinates in descending matrix order.	20264726	16	80	1	descending	descending_rows	tab	41	39	0.5125
+synthetic_046_descending_rows_06	descending_rows	Coordinates in descending matrix order.	20264727	24	100	1	descending	descending_rows	space	51	49	0.5100
+synthetic_047_descending_rows_07	descending_rows	Coordinates in descending matrix order.	20264728	32	150	1	descending	descending_rows	tab	76	74	0.5067
+synthetic_048_descending_rows_08	descending_rows	Coordinates in descending matrix order.	20264729	48	200	1	descending	descending_rows	space	101	99	0.5050
+synthetic_049_descending_rows_09	descending_rows	Coordinates in descending matrix order.	20264730	64	300	1	descending	descending_rows	tab	151	149	0.5033
+synthetic_050_descending_rows_10	descending_rows	Coordinates in descending matrix order.	20264731	96	500	1	descending	descending_rows	space	251	249	0.5020
+synthetic_051_no_match_01	no_match	A valid interval with no observed sites.	20265722	2	20	1	ascending	no_match	tab	0	20	0.0000
+synthetic_052_no_match_02	no_match	A valid interval with no observed sites.	20265723	4	30	1	ascending	no_match	space	0	30	0.0000
+synthetic_053_no_match_03	no_match	A valid interval with no observed sites.	20265724	8	40	1	ascending	no_match	tab	0	40	0.0000
+synthetic_054_no_match_04	no_match	A valid interval with no observed sites.	20265725	12	60	1	ascending	no_match	space	0	60	0.0000
+synthetic_055_no_match_05	no_match	A valid interval with no observed sites.	20265726	16	80	1	ascending	no_match	tab	0	80	0.0000
+synthetic_056_no_match_06	no_match	A valid interval with no observed sites.	20265727	24	100	1	ascending	no_match	space	0	100	0.0000
+synthetic_057_no_match_07	no_match	A valid interval with no observed sites.	20265728	32	150	1	ascending	no_match	tab	0	150	0.0000
+synthetic_058_no_match_08	no_match	A valid interval with no observed sites.	20265729	48	200	1	ascending	no_match	space	0	200	0.0000
+synthetic_059_no_match_09	no_match	A valid interval with no observed sites.	20265730	64	300	1	ascending	no_match	tab	0	300	0.0000
+synthetic_060_no_match_10	no_match	A valid interval with no observed sites.	20265731	96	500	1	ascending	no_match	space	0	500	0.0000
+synthetic_061_reversed_interval_01	reversed_interval	A reversed interval normalised before filtering.	20266722	2	20	1	ascending	reversed_interval	tab	9	11	0.4500
+synthetic_062_reversed_interval_02	reversed_interval	A reversed interval normalised before filtering.	20266723	4	30	1	ascending	reversed_interval	space	13	17	0.4333
+synthetic_063_reversed_interval_03	reversed_interval	A reversed interval normalised before filtering.	20266724	8	40	1	ascending	reversed_interval	tab	17	23	0.4250
+synthetic_064_reversed_interval_04	reversed_interval	A reversed interval normalised before filtering.	20266725	12	60	1	ascending	reversed_interval	space	25	35	0.4167
+synthetic_065_reversed_interval_05	reversed_interval	A reversed interval normalised before filtering.	20266726	16	80	1	ascending	reversed_interval	tab	33	47	0.4125
+synthetic_066_reversed_interval_06	reversed_interval	A reversed interval normalised before filtering.	20266727	24	100	1	ascending	reversed_interval	space	41	59	0.4100
+synthetic_067_reversed_interval_07	reversed_interval	A reversed interval normalised before filtering.	20266728	32	150	1	ascending	reversed_interval	tab	61	89	0.4067
+synthetic_068_reversed_interval_08	reversed_interval	A reversed interval normalised before filtering.	20266729	48	200	1	ascending	reversed_interval	space	81	119	0.4050
+synthetic_069_reversed_interval_09	reversed_interval	A reversed interval normalised before filtering.	20266730	64	300	1	ascending	reversed_interval	tab	121	179	0.4033
+synthetic_070_reversed_interval_10	reversed_interval	A reversed interval normalised before filtering.	20266731	96	500	1	ascending	reversed_interval	space	201	299	0.4020
+synthetic_071_duplicate_adjacent_01	duplicate_adjacent	Duplicate plus adjacent or nearby intervals.	20267722	2	20	3	ascending	duplicate_adjacent	tab	8	12	0.4000
+synthetic_072_duplicate_adjacent_02	duplicate_adjacent	Duplicate plus adjacent or nearby intervals.	20267723	4	30	3	ascending	duplicate_adjacent	space	12	18	0.4000
+synthetic_073_duplicate_adjacent_03	duplicate_adjacent	Duplicate plus adjacent or nearby intervals.	20267724	8	40	3	ascending	duplicate_adjacent	tab	15	25	0.3750
+synthetic_074_duplicate_adjacent_04	duplicate_adjacent	Duplicate plus adjacent or nearby intervals.	20267725	12	60	3	ascending	duplicate_adjacent	space	22	38	0.3667
+synthetic_075_duplicate_adjacent_05	duplicate_adjacent	Duplicate plus adjacent or nearby intervals.	20267726	16	80	3	ascending	duplicate_adjacent	tab	29	51	0.3625
+synthetic_076_duplicate_adjacent_06	duplicate_adjacent	Duplicate plus adjacent or nearby intervals.	20267727	24	100	3	ascending	duplicate_adjacent	space	36	64	0.3600
+synthetic_077_duplicate_adjacent_07	duplicate_adjacent	Duplicate plus adjacent or nearby intervals.	20267728	32	150	3	ascending	duplicate_adjacent	tab	54	96	0.3600
+synthetic_078_duplicate_adjacent_08	duplicate_adjacent	Duplicate plus adjacent or nearby intervals.	20267729	48	200	3	ascending	duplicate_adjacent	space	71	129	0.3550
+synthetic_079_duplicate_adjacent_09	duplicate_adjacent	Duplicate plus adjacent or nearby intervals.	20267730	64	300	3	ascending	duplicate_adjacent	tab	106	194	0.3533
+synthetic_080_duplicate_adjacent_10	duplicate_adjacent	Duplicate plus adjacent or nearby intervals.	20267731	96	500	3	ascending	duplicate_adjacent	space	176	324	0.3520
+synthetic_081_multiple_unsorted_01	multiple_unsorted	Multiple intervals supplied out of genomic order.	20268722	2	20	4	ascending	multiple_unsorted	tab	12	8	0.6000
+synthetic_082_multiple_unsorted_02	multiple_unsorted	Multiple intervals supplied out of genomic order.	20268723	4	30	4	ascending	multiple_unsorted	space	17	13	0.5667
+synthetic_083_multiple_unsorted_03	multiple_unsorted	Multiple intervals supplied out of genomic order.	20268724	8	40	4	ascending	multiple_unsorted	tab	21	19	0.5250
+synthetic_084_multiple_unsorted_04	multiple_unsorted	Multiple intervals supplied out of genomic order.	20268725	12	60	4	ascending	multiple_unsorted	space	30	30	0.5000
+synthetic_085_multiple_unsorted_05	multiple_unsorted	Multiple intervals supplied out of genomic order.	20268726	16	80	4	ascending	multiple_unsorted	tab	39	41	0.4875
+synthetic_086_multiple_unsorted_06	multiple_unsorted	Multiple intervals supplied out of genomic order.	20268727	24	100	4	ascending	multiple_unsorted	space	48	52	0.4800
+synthetic_087_multiple_unsorted_07	multiple_unsorted	Multiple intervals supplied out of genomic order.	20268728	32	150	4	ascending	multiple_unsorted	tab	71	79	0.4733
+synthetic_088_multiple_unsorted_08	multiple_unsorted	Multiple intervals supplied out of genomic order.	20268729	48	200	4	ascending	multiple_unsorted	space	93	107	0.4650
+synthetic_089_multiple_unsorted_09	multiple_unsorted	Multiple intervals supplied out of genomic order.	20268730	64	300	4	ascending	multiple_unsorted	tab	138	162	0.4600
+synthetic_090_multiple_unsorted_10	multiple_unsorted	Multiple intervals supplied out of genomic order.	20268731	96	500	4	ascending	multiple_unsorted	space	228	272	0.4560
+synthetic_091_nested_threeway_01	nested_threeway	Nested and partially overlapping intervals.	20269722	2	20	3	ascending	nested_threeway	tab	16	4	0.8000
+synthetic_092_nested_threeway_02	nested_threeway	Nested and partially overlapping intervals.	20269723	4	30	3	ascending	nested_threeway	space	24	6	0.8000
+synthetic_093_nested_threeway_03	nested_threeway	Nested and partially overlapping intervals.	20269724	8	40	3	ascending	nested_threeway	tab	31	9	0.7750
+synthetic_094_nested_threeway_04	nested_threeway	Nested and partially overlapping intervals.	20269725	12	60	3	ascending	nested_threeway	space	46	14	0.7667
+synthetic_095_nested_threeway_05	nested_threeway	Nested and partially overlapping intervals.	20269726	16	80	3	ascending	nested_threeway	tab	61	19	0.7625
+synthetic_096_nested_threeway_06	nested_threeway	Nested and partially overlapping intervals.	20269727	24	100	3	ascending	nested_threeway	space	76	24	0.7600
+synthetic_097_nested_threeway_07	nested_threeway	Nested and partially overlapping intervals.	20269728	32	150	3	ascending	nested_threeway	tab	114	36	0.7600
+synthetic_098_nested_threeway_08	nested_threeway	Nested and partially overlapping intervals.	20269729	48	200	3	ascending	nested_threeway	space	151	49	0.7550
+synthetic_099_nested_threeway_09	nested_threeway	Nested and partially overlapping intervals.	20269730	64	300	3	ascending	nested_threeway	tab	226	74	0.7533
+synthetic_100_nested_threeway_10	nested_threeway	Nested and partially overlapping intervals.	20269731	96	500	3	ascending	nested_threeway	space	376	124	0.7520

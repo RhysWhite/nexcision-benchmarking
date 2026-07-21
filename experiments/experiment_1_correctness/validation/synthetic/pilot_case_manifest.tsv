@@ -1,0 +1,11 @@
+case_id	description	ntax	nchar	interval_count	row_order	interval_geometry	separator	expected_removed	expected_retained	removal_fraction	expected_removed_labels
+synthetic_001_basic_sorted	Sorted rows with one ordinary interval removing two sites.	4	8	1	ascending	single	tab	2	6	0.250	SYNTHREF_1_120;SYNTHREF_1_130
+synthetic_002_two_disjoint	Two disjoint intervals remove one site each.	3	10	2	ascending	disjoint	space	2	8	0.200	SYNTHREF_1_20;SYNTHREF_1_80
+synthetic_003_overlapping	Overlapping intervals have independent counts but unique row removal.	5	12	2	ascending	overlapping	tab	7	5	0.583	SYNTHREF_1_110;SYNTHREF_1_115;SYNTHREF_1_120;SYNTHREF_1_125;SYNTHREF_1_130;SYNTHREF_1_135;SYNTHREF_1_140
+synthetic_004_shuffled_rows	Matrix rows are deliberately shuffled and retained order must be preserved.	6	12	1	shuffled	single	space	4	8	0.333	SYNTHREF_1_250;SYNTHREF_1_200;SYNTHREF_1_175;SYNTHREF_1_225
+synthetic_005_descending_rows	Matrix coordinates descend rather than ascend.	2	9	1	descending	single	tab	4	5	0.444	SYNTHREF_1_800;SYNTHREF_1_700;SYNTHREF_1_600;SYNTHREF_1_500
+synthetic_006_no_match	A valid region contains no observed site coordinates.	10	10	1	ascending	no_match	space	0	10	0.000	none
+synthetic_007_reversed_interval	A reversed interval is normalised before filtering.	7	11	1	ascending	reversed	tab	5	6	0.455	SYNTHREF_1_100;SYNTHREF_1_125;SYNTHREF_1_150;SYNTHREF_1_175;SYNTHREF_1_200
+synthetic_008_duplicate_adjacent	Duplicate and adjacent intervals are combined for membership but counted separately.	8	14	3	ascending	duplicate_and_adjacent	space	5	9	0.357	SYNTHREF_1_120;SYNTHREF_1_130;SYNTHREF_1_140;SYNTHREF_1_150;SYNTHREF_1_160
+synthetic_009_half_removed	Exactly half of the site rows are removed.	4	16	1	ascending	single	tab	8	8	0.500	SYNTHREF_1_100;SYNTHREF_1_110;SYNTHREF_1_120;SYNTHREF_1_130;SYNTHREF_1_140;SYNTHREF_1_150;SYNTHREF_1_160;SYNTHREF_1_170
+synthetic_010_multiple_unsorted	Four unsorted regions include three matching intervals and one no-match interval.	12	18	4	ascending	multiple_unsorted	space	11	7	0.611	SYNTHREF_1_126;SYNTHREF_1_139;SYNTHREF_1_152;SYNTHREF_1_191;SYNTHREF_1_204;SYNTHREF_1_217;SYNTHREF_1_230;SYNTHREF_1_243;SYNTHREF_1_282;SYNTHREF_1_295;SYNTHREF_1_308

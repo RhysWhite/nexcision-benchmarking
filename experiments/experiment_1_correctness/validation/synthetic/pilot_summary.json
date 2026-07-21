@@ -1,0 +1,16 @@
+{
+  "all_dimensions_correct": true,
+  "all_oracle_agreement": true,
+  "all_outputs_exact": true,
+  "all_region_counts_correct": true,
+  "all_report_checksums_correct": true,
+  "cases": 10,
+  "cases_passed": 10,
+  "maximum_intervals": 4,
+  "maximum_taxa": 12,
+  "minimum_intervals": 1,
+  "minimum_taxa": 2,
+  "total_rows_removed": 48,
+  "total_rows_retained": 72,
+  "total_site_rows": 120
+}

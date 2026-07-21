@@ -1,0 +1,11 @@
+case_id	ntax	nchar_before	interval_count	row_order	interval_geometry	rows_removed	rows_retained	removal_fraction	oracle_agreement	retained_rows_exact	dimensions	region_counts	report_checksums	overall
+synthetic_001_basic_sorted	4	8	1	ascending	single	2	6	0.250	PASS	PASS	PASS	PASS	PASS	PASS
+synthetic_002_two_disjoint	3	10	2	ascending	disjoint	2	8	0.200	PASS	PASS	PASS	PASS	PASS	PASS
+synthetic_003_overlapping	5	12	2	ascending	overlapping	7	5	0.583	PASS	PASS	PASS	PASS	PASS	PASS
+synthetic_004_shuffled_rows	6	12	1	shuffled	single	4	8	0.333	PASS	PASS	PASS	PASS	PASS	PASS
+synthetic_005_descending_rows	2	9	1	descending	single	4	5	0.444	PASS	PASS	PASS	PASS	PASS	PASS
+synthetic_006_no_match	10	10	1	ascending	no_match	0	10	0.000	PASS	PASS	PASS	PASS	PASS	PASS
+synthetic_007_reversed_interval	7	11	1	ascending	reversed	5	6	0.455	PASS	PASS	PASS	PASS	PASS	PASS
+synthetic_008_duplicate_adjacent	8	14	3	ascending	duplicate_and_adjacent	5	9	0.357	PASS	PASS	PASS	PASS	PASS	PASS
+synthetic_009_half_removed	4	16	1	ascending	single	8	8	0.500	PASS	PASS	PASS	PASS	PASS	PASS
+synthetic_010_multiple_unsorted	12	18	4	ascending	multiple_unsorted	11	7	0.611	PASS	PASS	PASS	PASS	PASS	PASS

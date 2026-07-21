@@ -1,0 +1,11 @@
+family	cases	site_rows	rows_removed	rows_retained	all_passed
+basic_single	10	1480	306	1174	PASS
+descending_rows	10	1480	750	730	PASS
+duplicate_adjacent	10	1480	529	951	PASS
+multiple_unsorted	10	1480	697	783	PASS
+nested_threeway	10	1480	1121	359	PASS
+no_match	10	1480	0	1480	PASS
+overlapping	10	1480	750	730	PASS
+reversed_interval	10	1480	602	878	PASS
+shuffled_rows	10	1480	529	951	PASS
+two_disjoint	10	1480	316	1164	PASS
