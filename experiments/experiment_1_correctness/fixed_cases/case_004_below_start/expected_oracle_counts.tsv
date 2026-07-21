@@ -1,0 +1,2 @@
+region_id	region_name	start	end	expected_removed_rows
+1	below_start	180	185	0
