@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Please cite the tagged NEXCISION software release and this benchmarking repository."
+title: "NEXCISION benchmarking and manuscript analyses"
+type: software
+authors:
+  - family-names: White
+    given-names: Rhys T.
+repository-code: "https://github.com/RhysWhite/nexcision-benchmarking"
+url: "https://github.com/RhysWhite/nexcision-benchmarking"
+license: MIT
+version: 0.1.0
+date-released: 2026-07-22
+abstract: >-
+  Reproducible validation, benchmarking, downstream analysis and manuscript
+  materials for NEXCISION, a command-line tool for precise removal of
+  coordinate-labelled sites from transposed NEXUS matrices.
+keywords:
+  - bioinformatics
+  - genomics
+  - NEXUS
+  - phylogenetics
+  - benchmarking
+  - research software
