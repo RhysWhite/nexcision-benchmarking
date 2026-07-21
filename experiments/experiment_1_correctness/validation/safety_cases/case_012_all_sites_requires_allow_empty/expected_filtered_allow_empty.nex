@@ -1,0 +1,9 @@
+#NEXUS
+
+begin data;
+    dimensions ntax=4 nchar=0;
+    format symbols="AGCT" gap=. transpose;
+    taxlabels Sample_A Sample_B Sample_C Sample_D;
+    matrix
+    ;
+end;

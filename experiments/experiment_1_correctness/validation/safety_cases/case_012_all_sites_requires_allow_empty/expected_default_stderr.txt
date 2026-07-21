@@ -1,0 +1,1 @@
+ERROR: Filtering would remove all 6 matrix rows. No output was written. Use --allow-empty to create an empty matrix intentionally.
