@@ -1,0 +1,15 @@
+#NeXuS
+
+BeGiN DaTa;
+    DiMeNsIoNs NTAX = 4 NCHAR = 6;
+    FoRmAt SYMBOLS="AGCT" GAP=. TrAnSpOsE;
+    TaXlAbElS Sample_A Sample_B Sample_C Sample_D;
+    MaTrIx
+CP013831_160    A C G T
+CP013831_170    C C G T
+CP013831_180    G A T C
+CP013831_190    T T A G
+CP013831_200    A G C T
+CP013831_220    C T A G
+    ;
+EnD;
