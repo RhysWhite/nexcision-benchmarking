@@ -1,10 +1,13 @@
 # Figures
 
-Planned core figures:
+Current manuscript figure assets include:
 
-1. NEXCISION workflow and file outputs.
-2. Experiment 1 correctness and validation design.
-3. Experiment 2 runtime and memory scaling.
-4. Biological impact across real datasets.
+1. NEXCISION workflow and file-output concepts under `assets/`.
+2. Experiment 2 runtime, memory, matrix-shape and interval-count panels under
+   `experiment_2/`.
+3. Experiment 2 supplementary interval-geometry, provenance-overhead and
+   run-order quality-control panels.
 
-Store both the final export and the script or source file used to generate it.
+Store both PNG exports and editable SVG files. The source measurements and
+generation script for Experiment 2 are under
+`experiments/experiment_2_scalability/`.
