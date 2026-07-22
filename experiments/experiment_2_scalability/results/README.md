@@ -1,27 +1,36 @@
-# Formal Experiment 2 results
+# Experiment 2 results
 
-This directory separates compact source measurements from derived analyses.
+This directory separates the instrumentation pilot from the frozen formal
+benchmark.
 
-## Source measurements committed to Git
+## Pilot
+
+`pilot/` contains the compact record from Slurm job `2432141`. All nine pilot
+executions were correct and deterministic within configuration. These runs
+validated the instrumentation only and are not used as manuscript performance
+measurements.
+
+## Formal benchmark
+
+`formal/` contains the compact source measurements from Slurm job `2432330`
+and the derived analysis tables.
+
+The committed source files are:
 
 ```text
-formal_measured-2432330.tsv
-formal_summary-2432330.tsv
-system_info-start-2432330.json
-system_info-end-2432330.json
+formal/formal_measured-2432330.tsv
+formal/formal_summary-2432330.tsv
+formal/system_info-start-2432330.json
+formal/system_info-end-2432330.json
 ```
 
-These files are small, auditable and sufficient to reproduce the reported
-configuration summaries and figures.
-
-## Derived outputs
+Derived outputs are stored under:
 
 ```text
-derived/experiment2_key_results.tsv
-derived/experiment2_qc_by_configuration.tsv
+formal/derived/
 ```
 
-Derived files must be regenerated with:
+Regenerate them with:
 
 ```bash
 python experiments/experiment_2_scalability/analysis/analyse_formal_results.py \
@@ -30,5 +39,5 @@ python experiments/experiment_2_scalability/analysis/analyse_formal_results.py \
 
 Generated NEXUS matrices, filtered outputs, virtual environments and repeated
 Slurm logs are not committed. Additional formal artefacts such as the case
-inventory, warm-up table and full Slurm logs may be archived with a tagged
-release or research-data deposit.
+inventory, warm-up table, benchmark context and full Slurm logs may be archived
+with a tagged release or research-data deposit.
