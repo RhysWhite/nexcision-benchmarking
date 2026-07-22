@@ -1,0 +1,42 @@
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments and packaging artefacts
+.venv/
+.venv-*/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+
+# Editors and temporary files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+*.bak
+*~
+
+# Generated Experiment 1 corpus
+experiments/experiment_1_correctness/validation/synthetic/cases_1000/
+
+# Generated Experiment 2 matrices and transient outputs
+experiments/experiment_2_scalability/results/formal/slurm-*.out
+experiments/experiment_2_scalability/results/formal/slurm-*.err
+experiments/experiment_2_scalability/results/formal/slurm-smoke-*.out
+experiments/experiment_2_scalability/results/formal/slurm-smoke-*.err
+experiments/experiment_2_scalability/results/pilot/slurm-*.out
+experiments/experiment_2_scalability/results/pilot/slurm-*.err

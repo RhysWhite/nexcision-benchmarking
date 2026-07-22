@@ -3,7 +3,7 @@
 This repository does not store private real-world genomic matrices or large
 generated benchmark corpora.
 
-- Real [SPANDx](https://github.com/dsarov/spandx) inputs are described in `real_inputs/README.md` and supplied
+- Real SPANDx inputs are described in `real_inputs/README.md` and supplied
   locally only when authorised.
 - Synthetic matrices are recreated from version-controlled generators and
   manifests.
