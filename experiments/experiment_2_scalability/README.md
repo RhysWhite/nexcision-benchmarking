@@ -80,7 +80,8 @@ For future runs, capture the machine from inside the Slurm allocation using
 ## Linux/Slurm protocol
 
 The formal benchmark is configured for the fixed PHF Science node
-`kscprod-bio1`, using one physical CPU core and node-local `/tmp` storage. See
+`kscprod-bio1`, using one benchmark process explicitly pinned to a single
+logical CPU on an exclusively allocated node, with node-local `/tmp` storage. See
 [`LINUX_SLURM_PROTOCOL.md`](LINUX_SLURM_PROTOCOL.md).
 
 Run the instrumentation pilot from the repository root:
