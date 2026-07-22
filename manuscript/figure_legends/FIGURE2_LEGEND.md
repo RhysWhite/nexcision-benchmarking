@@ -20,8 +20,9 @@ five measured executions.
 1 GiB matrix. Points represent medians and error bars show the interquartile
 range. The x-axis is logarithmic.
 
-All formal benchmarks were performed using NEXCISION v0.1.0 on one pinned CPU
-of an exclusively allocated AMD EPYC 9374F Linux node, with node-local XFS
+All formal benchmarks were performed using NEXCISION v0.1.0 on one pinned
+logical CPU of an exclusively allocated AMD EPYC 9374F Linux node, with
+node-local XFS
 storage. One unreported warm-up preceded five measured repetitions for each
 configuration, and measured-run order was randomized. Correctness was verified
 after every execution.
