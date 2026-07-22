@@ -6,7 +6,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Experiment%201-complete-2ea44f" alt="Experiment 1 complete">
+  <img src="https://img.shields.io/badge/Experiment%202-complete-2ea44f" alt="Experiment 2 complete">
   <img src="https://img.shields.io/badge/synthetic%20cases-1%2C000%2F1%2C000-2ea44f" alt="1,000 of 1,000 synthetic cases passed">
+  <img src="https://img.shields.io/badge/formal%20benchmark-105%2F105-2ea44f" alt="105 of 105 formal benchmark runs passed">
   <img src="https://img.shields.io/badge/mutation%20score-100%25-2ea44f" alt="100 percent mutation score">
   <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License">
 </p>
@@ -22,7 +24,7 @@ It is intentionally separate from the user-facing software repository. Users who
 | Experiment | Question | Status |
 |---|---|---|
 | [1. Formal correctness](experiments/experiment_1_correctness/) | Does NEXCISION remove exactly the intended rows and preserve everything else? | **Complete** |
-| [2. Scalability](experiments/experiment_2_scalability/) | How do runtime and memory scale with matrix size and interval count? | Planned |
+| [2. Scalability](experiments/experiment_2_scalability/) | How do runtime and memory scale with matrix size and interval count? | **Complete** |
 | [3. Independent equivalence](experiments/experiment_3_equivalence/) | Does NEXCISION reproduce independently derived masking results? | Planned |
 | [4. Biological impact](experiments/experiment_4_biological_impact/) | How does masking affect SNP distances, clustering and phylogenetic interpretation? | Planned |
 
@@ -37,6 +39,18 @@ It is intentionally separate from the user-facing software repository. Users who
 - **12/12** deliberately introduced implementation faults were detected.
 
 The consolidated methods and results are in the [Experiment 1 report](experiments/experiment_1_correctness/validation/EXPERIMENT1_REPORT.md).
+
+## Experiment 2 headline results
+
+- **105/105** formal measured executions were correct.
+- **21/21** configurations produced deterministic filtered outputs.
+- Runtime scaled near-linearly with input size (**R² = 0.9986**).
+- A **4.83 GiB** matrix was processed in **24.24 s** on one AMD EPYC 9374F CPU core.
+- Peak memory scaled at approximately **4.85 GiB RSS per GiB of input**.
+- Increasing the exclusion list from **1 to 100,000 intervals** increased median runtime by only **13.5%**.
+- Disjoint, adjacent, overlapping and nested interval sets differed in median runtime by only **2.8%**.
+
+The formal design is documented in the [Experiment 2 protocol](experiments/experiment_2_scalability/FORMAL_BENCHMARK_PROTOCOL.md), and the manuscript-ready interpretation is in the [Experiment 2 Results section](manuscript/results/EXPERIMENT2_RESULTS.md).
 
 ## Repository structure
 
@@ -58,7 +72,7 @@ nexcision-benchmarking/
 └── scripts/                          # top-level reproduction helpers
 ```
 
-Generated matrices, raw benchmark runs and temporary outputs are excluded from Git history. They are reconstructed from version-controlled scripts and manifests or archived separately with a formal release.
+Generated matrices, filtered benchmark outputs, repeated logs and temporary files are excluded from Git history. Compact measured-result tables, system metadata and derived summaries are retained so manuscript claims remain auditable.
 
 ## Quick start: reproduce the lightweight Experiment 1 suite
 
@@ -111,7 +125,7 @@ The three genuine SPANDx matrices used during Experiment 1 are **not committed**
 
 ## Manuscript outputs
 
-Publication figures, tables and supplementary material will be generated from version-controlled analysis scripts and stored under [`manuscript/`](manuscript/). Raw outputs remain separate from polished manuscript products.
+Publication figures, tables and supplementary material are generated from version-controlled analysis scripts and stored under [`manuscript/`](manuscript/). Compact source measurements remain under the relevant experiment directory, separate from polished manuscript products.
 
 ## Funding and affiliation
 
