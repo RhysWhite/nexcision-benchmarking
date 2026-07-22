@@ -116,7 +116,7 @@ not a larger persistent memory footprint.
 
 1. **Correctness was maintained at every tested scale.**
 2. **Runtime scaled near-linearly with input size**, with a 4.83 GiB input
-   processed in approximately 24.2 seconds on one AMD EPYC 9374F core.
+   processed in approximately 24.2 seconds on one pinned logical CPU of an AMD EPYC 9374F node.
 3. **Peak memory scaled linearly**, at approximately 4.85 GiB RSS per GiB of
    input; this is the major current implementation limitation.
 4. **The number of site rows matters independently of total bytes.**
