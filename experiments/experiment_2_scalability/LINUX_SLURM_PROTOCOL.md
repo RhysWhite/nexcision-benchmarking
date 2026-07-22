@@ -13,7 +13,9 @@ node-local storage. The current benchmark host is:
 ## Controls
 
 1. Use only `kscprod-bio1` for the formal benchmark.
-2. Use one physical CPU core (`--hint=nomultithread`).
+2. Request one CPU per task with `--hint=nomultithread`, reserve the node
+   exclusively, and explicitly pin the benchmark process to one logical CPU
+   with `taskset` when available.
 3. Keep `OMP_NUM_THREADS`, `OPENBLAS_NUM_THREADS`, `MKL_NUM_THREADS`, and
    `NUMEXPR_NUM_THREADS` fixed at 1.
 4. Generate inputs and write outputs under `/tmp`, not the NFS-mounted home
