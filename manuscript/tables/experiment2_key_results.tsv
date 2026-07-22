@@ -1,0 +1,21 @@
+metric	value	unit
+Measured executions	105.0	runs
+Correct executions	105.0	runs
+Deterministic configurations	21.0	of 21
+Formal benchmark duration	14.737553716666667	minutes
+Scratch-space growth during run	21.283565521240234	GiB
+Runtime slope	5.003580036526048	seconds per GiB input
+Runtime linear-model R²	0.9986367572957998	
+Runtime log-log exponent (>=100 MB)	0.9781285034028208	
+Peak-memory slope	4.848960350849582	GiB RSS per GiB input
+Peak-memory linear-model R²	0.9999999930704574	
+Peak-memory log-log exponent (>=100 MB)	0.9913349055950921	
+1 to 100,000 interval runtime increase	13.526126717845832	%
+1 to 100,000 interval memory increase	0.816620319482797	%
+Interval-geometry runtime spread	2.776706808826934	%
+Tall versus wide runtime ratio	3.476486897860004	fold
+Provenance-report runtime overhead	23.5571627805226	%
+Median runtime CV, excluding 10 MB	1.0820803601859867	%
+Maximum runtime CV, excluding 10 MB	1.8927660812292961	%
+Run-order correlation with normalized runtime	-0.01755600580786108	Pearson r
+Node-load correlation with normalized runtime	0.07057694515784806	Pearson r
