@@ -18,7 +18,7 @@ Peak resident memory also increased linearly with input size. The fitted slope
 was approximately 4.85 GiB of peak RSS per GiB of input, with an R² effectively
 equal to 1.0. The largest matrix, measuring 4.83 GiB, required approximately
 23.4 GiB peak RSS. Thus, although NEXCISION processed multi-gigabyte matrices
-rapidly on a single CPU core, memory consumption was the principal scalability
+rapidly on a single pinned logical CPU, memory consumption was the principal scalability
 limitation of version 0.1.0.
 
 Matrix shape influenced runtime independently of file size. Among three
