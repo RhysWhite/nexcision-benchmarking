@@ -3,7 +3,10 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
+import math
+import statistics
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -16,6 +19,8 @@ EXP = ROOT / "experiments" / "experiment_2_scalability"
 FORMAL = EXP / "results" / "formal"
 DERIVED = FORMAL / "derived"
 FIGURES = ROOT / "manuscript" / "figures" / "experiment_2"
+TABLES = ROOT / "manuscript" / "tables"
+EXPECTED_WHEEL_SHA256 = "f980aa7e1f4b5ef67ebe10b4117a07af3405ee0cd3805c1d2d9e936a284689d4"
 
 
 def parse_args() -> argparse.Namespace:
@@ -73,23 +78,278 @@ def nonnegative_errors(median, q1, q3):
     ])
 
 
-def main() -> int:
-    args = parse_args()
-    measured, summary, system_start, system_end = load_inputs(args.job_id)
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def normalized_bool(series: pd.Series, name: str) -> pd.Series:
+    """Parse a Boolean column without treating the string 'False' as truthy."""
+    if pd.api.types.is_bool_dtype(series):
+        return series.astype(bool)
+    mapping = {
+        "1": True,
+        "true": True,
+        "yes": True,
+        "y": True,
+        "0": False,
+        "false": False,
+        "no": False,
+        "n": False,
+    }
+    normalized = series.astype(str).str.strip().str.lower().map(mapping)
+    if normalized.isna().any():
+        bad = sorted(set(series.loc[normalized.isna()].astype(str)))
+        raise SystemExit(f"Invalid Boolean values in {name}: {bad}")
+    return normalized.astype(bool)
+
+
+def percentile(values: list[float], probability: float) -> float:
+    ordered = sorted(values)
+    if not ordered:
+        raise ValueError("Cannot calculate a percentile of an empty list.")
+    if len(ordered) == 1:
+        return ordered[0]
+    position = (len(ordered) - 1) * probability
+    lower = math.floor(position)
+    upper = math.ceil(position)
+    if lower == upper:
+        return ordered[lower]
+    fraction = position - lower
+    return ordered[lower] + fraction * (ordered[upper] - ordered[lower])
+
+
+def close_enough(observed: float, expected: float) -> bool:
+    return math.isclose(float(observed), float(expected), rel_tol=1e-12, abs_tol=1e-9)
+
+
+def validate_source_record(
+    measured: pd.DataFrame,
+    summary: pd.DataFrame,
+    system_start: dict,
+    system_end: dict,
+    job_id: str,
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    required_measured = {
+        "series", "case_id", "repeat", "returncode", "correct",
+        "elapsed_seconds", "peak_rss_bytes", "throughput_input_mib_s",
+        "cpu_seconds", "cpu_efficiency", "filtered_sha256", "taxa", "sites",
+        "actual_intervals", "geometry", "actual_removal_fraction",
+        "with_report", "input_bytes", "output_bytes", "expected_retained_rows",
+        "observed_retained_rows", "observed_ntax", "observed_nchar",
+        "run_order", "load1_before", "started_at_utc", "finished_at_utc",
+    }
+    required_summary = {
+        "series", "case_id", "n_runs", "all_correct",
+        "deterministic_output", "taxa", "sites", "actual_intervals",
+        "geometry", "actual_removal_fraction", "with_report", "input_bytes",
+        "input_gib", "output_bytes", "elapsed_median_seconds",
+        "elapsed_q1_seconds", "elapsed_q3_seconds", "elapsed_iqr_seconds",
+        "peak_rss_median_bytes", "peak_rss_q1_bytes", "peak_rss_q3_bytes",
+        "peak_rss_median_gib", "throughput_median_mib_s",
+        "throughput_q1_mib_s", "throughput_q3_mib_s",
+        "cpu_seconds_median", "cpu_efficiency_median",
+    }
+    missing_measured = required_measured - set(measured.columns)
+    missing_summary = required_summary - set(summary.columns)
+    if missing_measured:
+        raise SystemExit(f"Measured table is missing columns: {sorted(missing_measured)}")
+    if missing_summary:
+        raise SystemExit(f"Summary table is missing columns: {sorted(missing_summary)}")
+
+    measured = measured.copy()
+    summary = summary.copy()
+    measured["correct"] = normalized_bool(measured["correct"], "measured.correct")
+    measured["with_report"] = normalized_bool(
+        measured["with_report"], "measured.with_report"
+    )
+    summary["all_correct"] = normalized_bool(
+        summary["all_correct"], "summary.all_correct"
+    )
+    summary["deterministic_output"] = normalized_bool(
+        summary["deterministic_output"], "summary.deterministic_output"
+    )
+    summary["with_report"] = normalized_bool(
+        summary["with_report"], "summary.with_report"
+    )
 
     if len(measured) != 105:
         raise SystemExit(f"Expected 105 measured runs; observed {len(measured)}.")
-    if not measured["correct"].astype(bool).all():
-        raise SystemExit("At least one measured run failed correctness checks.")
     if len(summary) != 21:
         raise SystemExit(f"Expected 21 configurations; observed {len(summary)}.")
-    if not summary["all_correct"].astype(bool).all():
+    if measured["case_id"].nunique() != 21:
+        raise SystemExit("Measured table does not contain exactly 21 unique case IDs.")
+    if summary["case_id"].nunique() != 21:
+        raise SystemExit("Summary table does not contain exactly 21 unique case IDs.")
+    if not (measured["returncode"] == 0).all():
+        raise SystemExit("At least one measured run has a non-zero return code.")
+    if not measured["correct"].all():
+        raise SystemExit("At least one measured run failed correctness checks.")
+    if not summary["all_correct"].all():
         raise SystemExit("At least one summary configuration is not fully correct.")
-    if not summary["deterministic_output"].astype(bool).all():
+    if not summary["deterministic_output"].all():
         raise SystemExit("At least one configuration has non-deterministic output.")
+
+    group_sizes = measured.groupby("case_id").size()
+    if not (group_sizes == 5).all():
+        raise SystemExit(
+            "Every configuration must contain five measured repetitions; "
+            f"observed {group_sizes.to_dict()}."
+        )
+    for case_id, group in measured.groupby("case_id"):
+        repeats = sorted(group["repeat"].astype(int).tolist())
+        if repeats != [1, 2, 3, 4, 5]:
+            raise SystemExit(f"Unexpected repeat identifiers for {case_id}: {repeats}")
+        if group["filtered_sha256"].nunique() != 1:
+            raise SystemExit(f"Filtered output was not deterministic for {case_id}.")
+        if not (
+            group["observed_retained_rows"].astype(int)
+            == group["expected_retained_rows"].astype(int)
+        ).all():
+            raise SystemExit(f"Retained-row mismatch in {case_id}.")
+        if not (
+            group["observed_nchar"].astype(int)
+            == group["expected_retained_rows"].astype(int)
+        ).all():
+            raise SystemExit(f"nchar mismatch in {case_id}.")
+        if not (
+            group["observed_ntax"].astype(int) == group["taxa"].astype(int)
+        ).all():
+            raise SystemExit(f"ntax mismatch in {case_id}.")
+
+    # Independently verify every configuration summary from the measured table.
+    summary_by_case = summary.set_index("case_id")
+    for case_id, group in measured.groupby("case_id"):
+        if case_id not in summary_by_case.index:
+            raise SystemExit(f"Summary is missing configuration {case_id}.")
+        row = summary_by_case.loc[case_id]
+        elapsed = group["elapsed_seconds"].astype(float).tolist()
+        peak = group["peak_rss_bytes"].astype(float).tolist()
+        throughput = group["throughput_input_mib_s"].astype(float).tolist()
+        cpu_seconds = group["cpu_seconds"].astype(float).tolist()
+        cpu_efficiency = group["cpu_efficiency"].astype(float).tolist()
+
+        expected_values = {
+            "n_runs": len(group),
+            "elapsed_median_seconds": statistics.median(elapsed),
+            "elapsed_q1_seconds": percentile(elapsed, 0.25),
+            "elapsed_q3_seconds": percentile(elapsed, 0.75),
+            "peak_rss_median_bytes": statistics.median(peak),
+            "peak_rss_q1_bytes": percentile(peak, 0.25),
+            "peak_rss_q3_bytes": percentile(peak, 0.75),
+            "throughput_median_mib_s": statistics.median(throughput),
+            "throughput_q1_mib_s": percentile(throughput, 0.25),
+            "throughput_q3_mib_s": percentile(throughput, 0.75),
+            "cpu_seconds_median": statistics.median(cpu_seconds),
+            "cpu_efficiency_median": statistics.median(cpu_efficiency),
+        }
+        expected_values["elapsed_iqr_seconds"] = (
+            expected_values["elapsed_q3_seconds"]
+            - expected_values["elapsed_q1_seconds"]
+        )
+        expected_values["peak_rss_median_gib"] = (
+            expected_values["peak_rss_median_bytes"] / (1024**3)
+        )
+        for column, expected in expected_values.items():
+            if not close_enough(row[column], expected):
+                raise SystemExit(
+                    f"Stored summary disagrees with measured data for "
+                    f"{case_id}.{column}: observed {row[column]!r}, "
+                    f"expected {expected!r}."
+                )
+
+        first = group.iloc[0]
+        constant_values = {
+            "series": first["series"],
+            "taxa": int(first["taxa"]),
+            "sites": int(first["sites"]),
+            "actual_intervals": int(first["actual_intervals"]),
+            "geometry": first["geometry"],
+            "actual_removal_fraction": float(first["actual_removal_fraction"]),
+            "with_report": bool(first["with_report"]),
+            "input_bytes": int(first["input_bytes"]),
+            "input_gib": int(first["input_bytes"]) / (1024**3),
+            "output_bytes": int(first["output_bytes"]),
+        }
+        for column, expected in constant_values.items():
+            observed = row[column]
+            if isinstance(expected, float):
+                valid = close_enough(observed, expected)
+            else:
+                valid = observed == expected
+            if not valid:
+                raise SystemExit(
+                    f"Stored summary metadata disagrees for {case_id}.{column}: "
+                    f"observed {observed!r}, expected {expected!r}."
+                )
+
+    # Validate the two system snapshots and the frozen software artifact.
+    for label, snapshot in [("start", system_start), ("end", system_end)]:
+        observed_job = str(snapshot.get("environment", {}).get("SLURM_JOB_ID"))
+        if observed_job != str(job_id):
+            raise SystemExit(
+                f"{label} system snapshot records Slurm job {observed_job}, "
+                f"expected {job_id}."
+            )
+        wheel = snapshot.get("software_wheel") or {}
+        if wheel.get("sha256") != EXPECTED_WHEEL_SHA256:
+            raise SystemExit(
+                f"{label} system snapshot has an unexpected wheel checksum."
+            )
+        version = (
+            snapshot.get("commands", {})
+            .get("nexcise_version", {})
+            .get("stdout")
+        )
+        if version != "NEXCISION 0.1.0":
+            raise SystemExit(
+                f"{label} system snapshot records an unexpected version: {version!r}."
+            )
+
+    start_host = (
+        system_start.get("commands", {}).get("hostname", {}).get("stdout")
+    )
+    end_host = system_end.get("commands", {}).get("hostname", {}).get("stdout")
+    if not start_host or start_host != end_host:
+        raise SystemExit("Start and end system snapshots do not record the same host.")
+
+    start_commit = (
+        system_start.get("commands", {}).get("git_commit", {}).get("stdout")
+    )
+    end_commit = system_end.get("commands", {}).get("git_commit", {}).get("stdout")
+    if not start_commit or start_commit != end_commit:
+        raise SystemExit("Start and end system snapshots do not record the same commit.")
+
+    local_wheel = ROOT / "software" / "nexcision-0.1.0-py3-none-any.whl"
+    if sha256_file(local_wheel) != EXPECTED_WHEEL_SHA256:
+        raise SystemExit("The repository wheel does not match the frozen checksum.")
+
+    start_time = pd.Timestamp(system_start["captured_at_utc"])
+    end_time = pd.Timestamp(system_end["captured_at_utc"])
+    if not start_time < end_time:
+        raise SystemExit("System snapshot timestamps are not ordered.")
+
+    measured_start = pd.to_datetime(measured["started_at_utc"], utc=True).min()
+    measured_end = pd.to_datetime(measured["finished_at_utc"], utc=True).max()
+    if measured_start < start_time or measured_end > end_time:
+        raise SystemExit("Measured run timestamps fall outside the system snapshots.")
+
+    return measured, summary
+
+
+def main() -> int:
+    args = parse_args()
+    measured, summary, system_start, system_end = load_inputs(args.job_id)
+    measured, summary = validate_source_record(
+        measured, summary, system_start, system_end, args.job_id
+    )
 
     DERIVED.mkdir(parents=True, exist_ok=True)
     FIGURES.mkdir(parents=True, exist_ok=True)
+    TABLES.mkdir(parents=True, exist_ok=True)
 
     grouped = measured.groupby(["series", "case_id"], sort=False)
     qc = grouped.agg(
@@ -274,6 +534,11 @@ def main() -> int:
         sep="\t",
         index=False,
     )
+    key_results.to_csv(
+        TABLES / "experiment2_key_results.tsv",
+        sep="\t",
+        index=False,
+    )
 
     # Figure 2A: runtime scaling
     plt.figure(figsize=(7.2, 5.2))
@@ -440,8 +705,9 @@ def main() -> int:
     plt.title("No material runtime drift across the formal benchmark")
     save_figure("figure_S2C_run_order_qc")
 
-    print("PASS — Experiment 2 analysis reproduced successfully.")
+    print("PASS — Experiment 2 source record validated and analysis reproduced.")
     print(f"Derived tables: {DERIVED}")
+    print(f"Manuscript table: {TABLES / 'experiment2_key_results.tsv'}")
     print(f"Figures: {FIGURES}")
     return 0
 
