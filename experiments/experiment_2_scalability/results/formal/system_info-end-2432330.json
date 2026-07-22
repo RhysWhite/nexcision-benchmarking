@@ -1,0 +1,177 @@
+{
+  "captured_at_utc": "2026-07-22T00:47:44.017796+00:00",
+  "commands": {
+    "block_devices": {
+      "available": true,
+      "command": [
+        "lsblk",
+        "-o",
+        "NAME,TYPE,SIZE,ROTA,MODEL,MOUNTPOINT"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "NAME        TYPE   SIZE ROTA MODEL                                    MOUNTPOINT\nsda         disk   3.5T    0 MZILG3T8HCLSAD3                          \n\u2514\u2500sda1      part   3.5T    0                                          /tmp\nnvme0n1     disk 447.1G    0 Dell BOSS-N1                             \n\u251c\u2500nvme0n1p1 part   600M    0                                          /boot/efi\n\u251c\u2500nvme0n1p2 part     1G    0                                          /boot\n\u251c\u2500nvme0n1p3 part     4G    0                                          [SWAP]\n\u2514\u2500nvme0n1p4 part 441.5G    0                                          /"
+    },
+    "filesystem_repository": {
+      "available": true,
+      "command": [
+        "df",
+        "-T",
+        "/tmp/rwhite/nexcision-exp2-formal-2432330/repo"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Filesystem     Type  1K-blocks     Used  Available Use% Mounted on\n/dev/sda1      xfs  3748905808 48760364 3700145444   2% /tmp"
+    },
+    "filesystem_tmp": {
+      "available": true,
+      "command": [
+        "df",
+        "-T",
+        "/tmp"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Filesystem     Type  1K-blocks     Used  Available Use% Mounted on\n/dev/sda1      xfs  3748905808 48760364 3700145444   2% /tmp"
+    },
+    "git_commit": {
+      "available": true,
+      "command": [
+        "git",
+        "-C",
+        "/tmp/rwhite/nexcision-exp2-formal-2432330/repo",
+        "rev-parse",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "959859aa444784c9cedac5088520b322ded49567"
+    },
+    "hostname": {
+      "available": true,
+      "command": [
+        "hostname",
+        "-f"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "kscprod-bio1.esr.cri.nz"
+    },
+    "load_average": {
+      "available": true,
+      "command": [
+        "cat",
+        "/proc/loadavg"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "1.00 1.02 1.40 3/2176 769823"
+    },
+    "lscpu": {
+      "available": true,
+      "command": [
+        "lscpu"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Architecture:        x86_64\nCPU op-mode(s):      32-bit, 64-bit\nByte Order:          Little Endian\nCPU(s):              128\nOn-line CPU(s) list: 0-127\nThread(s) per core:  2\nCore(s) per socket:  32\nSocket(s):           2\nNUMA node(s):        2\nVendor ID:           AuthenticAMD\nCPU family:          25\nModel:               17\nModel name:          AMD EPYC 9374F 32-Core Processor\nStepping:            1\nCPU MHz:             4297.076\nBogoMIPS:            7699.79\nVirtualization:      AMD-V\nL1d cache:           32K\nL1i cache:           32K\nL2 cache:            1024K\nL3 cache:            32768K\nNUMA node0 CPU(s):   0-31,64-95\nNUMA node1 CPU(s):   32-63,96-127\nFlags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good amd_lbr_v2 nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 invpcid_single hw_pstate ssbd mba perfmon_v2 ibrs ibpb stibp ibrs_enhanced vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local avx512_bf16 clzero irperf xsaveerptr wbnoinvd amd_ppin cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif x2avic v_spec_ctrl avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq la57 rdpid overflow_recov succor smca fsrm flush_l1d"
+    },
+    "memory": {
+      "available": true,
+      "command": [
+        "free",
+        "-b"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "total        used        free      shared  buff/cache   available\nMem:    2434639011840 11778359296 922492051456  3341893632 1500368601088 2407694008320\nSwap:    4294963200    61603840  4233359360"
+    },
+    "nexcise_version": {
+      "available": true,
+      "command": [
+        "/tmp/rwhite/nexcision-exp2-formal-2432330/repo/.venv-exp2/bin/python",
+        "-m",
+        "nexcision",
+        "--version"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "NEXCISION 0.1.0"
+    },
+    "numa": {
+      "available": false,
+      "command": [
+        "numactl",
+        "--hardware"
+      ]
+    },
+    "slurm_node": {
+      "available": true,
+      "command": [
+        "scontrol",
+        "show",
+        "node",
+        "kscprod-bio1"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "NodeName=kscprod-bio1 Arch=x86_64 CoresPerSocket=32 \n   CPUAlloc=128 CPUTot=128 CPULoad=1.02\n   AvailableFeatures=(null)\n   ActiveFeatures=(null)\n   Gres=(null)\n   NodeAddr=10.1.107.101 NodeHostName=kscprod-bio1 Version=20.11.9\n   OS=Linux 4.18.0-553.126.1.el8_10.x86_64 #1 SMP Fri May 29 15:43:47 UTC 2026 \n   RealMemory=2300000 AllocMem=0 FreeMem=877856 Sockets=2 Boards=1\n   State=ALLOCATED ThreadsPerCore=2 TmpDisk=0 Weight=20 Owner=N/A MCS_label=N/A\n   Partitions=prod,urgent \n   BootTime=2026-06-05T08:31:33 SlurmdStartTime=2026-06-05T08:31:51\n   CfgTRES=cpu=128,mem=2300000M,billing=128\n   AllocTRES=cpu=128\n   CapWatts=n/a\n   CurrentWatts=0 AveWatts=0\n   ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s\n   Comment=(null)"
+    },
+    "uname": {
+      "available": true,
+      "command": [
+        "uname",
+        "-a"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Linux kscprod-bio1.esr.cri.nz 4.18.0-553.126.1.el8_10.x86_64 #1 SMP Fri May 29 15:43:47 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux"
+    },
+    "uptime": {
+      "available": true,
+      "command": [
+        "uptime"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "12:47:44 up 47 days,  4:16,  3 users,  load average: 1.00, 1.02, 1.40"
+    }
+  },
+  "environment": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "SLURM_CPUS_ON_NODE": "128",
+    "SLURM_CPUS_PER_TASK": "1",
+    "SLURM_JOB_CPUS_PER_NODE": "128",
+    "SLURM_JOB_ID": "2432330",
+    "SLURM_JOB_NAME": "nexc-exp2-formal",
+    "SLURM_JOB_NODELIST": "kscprod-bio1",
+    "SLURM_JOB_PARTITION": "prod",
+    "SLURM_MEM_PER_NODE": null,
+    "SLURM_TMPDIR": null,
+    "TMPDIR": "/tmp/rwhite/nexcision-exp2-formal-2432330/tmp"
+  },
+  "platform": {
+    "logical_cpu_count": 128,
+    "machine": "x86_64",
+    "processor": "x86_64",
+    "python": "3.10.14 | packaged by conda-forge | (main, Mar 20 2024, 12:45:18) [GCC 12.3.0]",
+    "python_executable": "/tmp/rwhite/nexcision-exp2-formal-2432330/repo/.venv-exp2/bin/python",
+    "release": "4.18.0-553.126.1.el8_10.x86_64",
+    "system": "Linux",
+    "version": "#1 SMP Fri May 29 15:43:47 UTC 2026"
+  },
+  "repository_root": "/tmp/rwhite/nexcision-exp2-formal-2432330/repo",
+  "software_wheel": {
+    "path": "/tmp/rwhite/nexcision-exp2-formal-2432330/repo/software/nexcision-0.1.0-py3-none-any.whl",
+    "sha256": "f980aa7e1f4b5ef67ebe10b4117a07af3405ee0cd3805c1d2d9e936a284689d4",
+    "size_bytes": 14013
+  },
+  "storage_at_repository": {
+    "free_bytes": 3788948934656,
+    "total_bytes": 3838879547392,
+    "used_bytes": 49930612736
+  },
+  "working_directory": "/tmp/rwhite/nexcision-exp2-formal-2432330/repo"
+}
