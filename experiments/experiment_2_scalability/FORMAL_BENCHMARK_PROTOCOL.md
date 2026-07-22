@@ -16,14 +16,16 @@ checksum before it is accepted.
 - Partition: `prod`
 - CPU: AMD EPYC 9374F
 - Allocation: exclusive node
-- NEXCISION execution: one process pinned to one allowed CPU
+- NEXCISION execution: one process pinned to one logical CPU
 - Memory: full node allocation (`--mem=0`)
 - Working filesystem: node-local `/tmp` on XFS
 - Python: 3.10.14
 - Software artifact: `software/nexcision-0.1.0-py3-none-any.whl`
 
 The entire node is reserved to prevent interference from other Slurm jobs, but
-NEXCISION is deliberately run on one CPU because v0.1.0 is single-process.
+NEXCISION is deliberately restricted to one logical CPU because v0.1.0 is
+single-process. The sibling hardware thread remains idle during the exclusive
+allocation.
 
 ## Cache and timing protocol
 
