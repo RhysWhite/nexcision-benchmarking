@@ -15,7 +15,7 @@
 
 # NEXCISION benchmarking
 
-This repository contains the **validation, benchmarking, analysis and manuscript materials** for [NEXCISION](https://github.com/RhysWhite/nexcision).
+This repository contains the **validation, benchmarking, analysis, and manuscript materials** for [NEXCISION](https://github.com/RhysWhite/nexcision).
 
 It is intentionally separate from the user-facing software repository. Users who only want to install and run NEXCISION do not need to download the experiments or manuscript analyses maintained here.
 
@@ -33,7 +33,7 @@ It is intentionally separate from the user-facing software repository. Users who
 - **1,000/1,000** deterministic synthetic matrices passed.
 - **304,000** coordinate-labelled site rows were evaluated.
 - **113,740** rows were correctly removed and **190,260** were correctly retained.
-- **3** genuine SPANDx matrices passed compatibility checks.
+- **3** genuine [SPANDx](https://github.com/dsarov/spandx) matrices passed compatibility checks.
 - **26/26** malformed-input and output-safety cases passed.
 - **9/9** property-based invariants passed across **1,800** generated examples.
 - **12/12** deliberately introduced implementation faults were detected.
@@ -72,7 +72,7 @@ nexcision-benchmarking/
 └── scripts/                          # top-level reproduction helpers
 ```
 
-Generated matrices, filtered benchmark outputs, repeated logs and temporary files are excluded from Git history. Compact measured-result tables, system metadata and derived summaries are retained so manuscript claims remain auditable.
+Generated matrices, filtered benchmark outputs, repeated logs, and temporary files are excluded from Git history. Compact measured-result tables, system metadata, and derived summaries are retained so manuscript claims remain auditable.
 
 ## Quick start: reproduce the lightweight Experiment 1 suite
 
@@ -121,11 +121,11 @@ The wheel is stored here because it is small and ensures that the experimental r
 
 ## Data policy
 
-The three genuine SPANDx matrices used during Experiment 1 are **not committed** to this repository. Their filenames, characteristics and SHA-256 checksums are recorded in [`data/real_inputs/README.md`](data/real_inputs/README.md). Synthetic matrices are generated locally and excluded from version control.
+The three genuine [SPANDx](https://github.com/dsarov/spandx) matrices used during Experiment 1 are **not committed** to this repository. Their filenames, characteristics and SHA-256 checksums are recorded in [`data/real_inputs/README.md`](data/real_inputs/README.md). Synthetic matrices are generated locally and excluded from version control.
 
 ## Manuscript outputs
 
-Publication figures, tables and supplementary material are generated from version-controlled analysis scripts and stored under [`manuscript/`](manuscript/). Compact source measurements remain under the relevant experiment directory, separate from polished manuscript products.
+Publication figures, tables, and supplementary material are generated from version-controlled analysis scripts and stored under [`manuscript/`](manuscript/). Compact source measurements remain under the relevant experiment directory, separate from polished manuscript products.
 
 ## Funding and affiliation
 
