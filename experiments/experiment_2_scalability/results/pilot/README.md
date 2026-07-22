@@ -1,7 +1,7 @@
 # Instrumentation pilot: Slurm job 2432141
 
 This directory contains the compact record of the Experiment 2 instrumentation
-pilot performed on `kscprod-bio1.esr.cri.nz`.
+pilot performed on `kscprod-bio1`.
 
 The pilot produced nine correct executions across three small configurations.
 Repeated filtered outputs were deterministic within each configuration.
