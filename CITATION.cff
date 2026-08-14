@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the tagged NEXCISION software release and this benchmarking repository."
+message: "Please cite this benchmarking release and the NEXCISION preprint."
 title: "NEXCISION benchmarking and manuscript analyses"
 type: software
 authors:
@@ -9,7 +9,7 @@ repository-code: "https://github.com/RhysWhite/nexcision-benchmarking"
 url: "https://github.com/RhysWhite/nexcision-benchmarking"
 license: MIT
 version: 0.1.0
-date-released: 2026-07-22
+date-released: 2026-08-15
 abstract: >-
   Reproducible validation, benchmarking, downstream analysis and manuscript
   materials for NEXCISION, a command-line tool for precise removal of

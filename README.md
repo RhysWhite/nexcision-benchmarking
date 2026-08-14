@@ -162,7 +162,7 @@ Publication figures, tables and supplementary material are generated from versio
 
 ## Citation
 
-Citation metadata are provided in [`CITATION.cff`](CITATION.cff). Until a formal software paper or DOI is available, cite the relevant tagged releases of both the NEXCISION software and this benchmarking repository.
+Citation metadata for this repository are provided in [`CITATION.cff`](CITATION.cff). The NEXCISION methods and validation are described in the bioRxiv & medRxiv preprint [White (2026)](https://doi.org/10.64898/2026.07.26.740842). For reproducible reuse of these analyses, cite the relevant tagged releases of both NEXCISION and this benchmarking repository.
 
 ## License
 
