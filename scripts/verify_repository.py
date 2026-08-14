@@ -174,6 +174,180 @@ def check_wheel() -> None:
         raise AuditFailure("software/SHA256SUMS.txt names the wrong wheel.")
 
 
+
+def check_experiment1_artifact_provenance() -> None:
+    synthetic = (
+        ROOT
+        / "experiments"
+        / "experiment_1_correctness"
+        / "validation"
+        / "synthetic"
+    )
+
+    wheel_name = "nexcision-0.1.0-py3-none-any.whl"
+    historical_sha256 = (
+        "e54ed4058f3736a5bc39a79d63dac4e2"
+        "b43ba62a4a2f3631acc3d749b2ed0ceb"
+    )
+    revalidated_commit = (
+        "5fff3aa03e581ff8644219e75c086ed140522b97"
+    )
+
+    record_path = synthetic / "archival_revalidation_20260815.json"
+    if not record_path.is_file():
+        raise AuditFailure(
+            "Experiment 1 archival revalidation record is missing."
+        )
+
+    record = json.loads(record_path.read_text(encoding="utf-8"))
+
+    if record.get("schema_version") != 1:
+        raise AuditFailure(
+            "Experiment 1 archival revalidation has the wrong schema version."
+        )
+
+    if record.get("record_type") != "archival_revalidation":
+        raise AuditFailure(
+            "Experiment 1 archival revalidation has the wrong record type."
+        )
+
+    if record.get("repository_commit_revalidated") != revalidated_commit:
+        raise AuditFailure(
+            "Experiment 1 archival revalidation identifies the wrong "
+            "repository commit."
+        )
+
+    artifact = record.get("frozen_artifact", {})
+    if artifact.get("path") != f"software/{wheel_name}":
+        raise AuditFailure(
+            "Experiment 1 archival revalidation names the wrong frozen artifact."
+        )
+    if artifact.get("version") != "0.1.0":
+        raise AuditFailure(
+            "Experiment 1 archival revalidation records the wrong "
+            "NEXCISION version."
+        )
+    if artifact.get("sha256") != EXPECTED_WHEEL_SHA256:
+        raise AuditFailure(
+            "Experiment 1 archival revalidation checksum does not match "
+            "the frozen repository wheel."
+        )
+
+    expected_runs = {
+        "synthetic_100_case_revalidation": {
+            "cases": 100,
+            "cases_passed": 100,
+            "total_site_rows": 14800,
+            "rows_removed": 5600,
+            "rows_retained": 9200,
+        },
+        "synthetic_1000_case_revalidation": {
+            "cases": 1000,
+            "cases_passed": 1000,
+            "total_site_rows": 304000,
+            "rows_removed": 113740,
+            "rows_retained": 190260,
+        },
+    }
+
+    for key, expected in expected_runs.items():
+        run = record.get(key, {})
+        if run.get("status") != "PASS":
+            raise AuditFailure(
+                f"Experiment 1 archival revalidation does not PASS for {key}."
+            )
+        if run.get("oracle_agreement") is not True:
+            raise AuditFailure(
+                f"Experiment 1 archival revalidation lacks exact oracle "
+                f"agreement for {key}."
+            )
+
+        for field, value in expected.items():
+            if run.get(field) != value:
+                raise AuditFailure(
+                    f"Experiment 1 archival revalidation has unexpected "
+                    f"{field} for {key}."
+                )
+
+        comparison = run.get("stored_result_comparison", {})
+        if comparison.get("all_nonruntime_fields_identical") is not True:
+            raise AuditFailure(
+                f"Experiment 1 archival revalidation has substantive "
+                f"result differences for {key}."
+            )
+        if comparison.get("differing_fields") != ["runtime_seconds"]:
+            raise AuditFailure(
+                f"Experiment 1 archival revalidation has unexpected "
+                f"differing fields for {key}."
+            )
+        if comparison.get("ignored_nondeterministic_fields") != [
+            "runtime_seconds"
+        ]:
+            raise AuditFailure(
+                f"Experiment 1 archival revalidation has unexpected "
+                f"nondeterministic fields for {key}."
+            )
+
+    corpus = record.get("regenerated_1000_case_corpus", {})
+    if corpus.get("identical") is not True:
+        raise AuditFailure(
+            "Experiment 1 regenerated 1,000-case corpus is not identical."
+        )
+
+    corpus_record = (
+        synthetic / "case_1000_corpus_sha256.txt"
+    ).read_text(encoding="utf-8").split()[0]
+
+    if (
+        corpus.get("stored_sha256") != corpus_record
+        or corpus.get("fresh_sha256") != corpus_record
+    ):
+        raise AuditFailure(
+            "Experiment 1 archival revalidation corpus checksum does not "
+            "match the repository record."
+        )
+
+    provenance = record.get("historical_provenance", {})
+    if (
+        provenance.get(
+            "checksum_recorded_in_original_july_2026_synthetic_records"
+        )
+        != historical_sha256
+    ):
+        raise AuditFailure(
+            "Experiment 1 archival revalidation does not preserve the "
+            "historical July 2026 checksum."
+        )
+
+    if (
+        provenance.get("checksum_of_wheel_frozen_in_repository")
+        != EXPECTED_WHEEL_SHA256
+    ):
+        raise AuditFailure(
+            "Experiment 1 archival revalidation records the wrong frozen "
+            "repository checksum."
+        )
+
+    # Preserve the original July 2026 records exactly as historical evidence.
+    historical_summary = json.loads(
+        (synthetic / "case_100_summary.json").read_text(encoding="utf-8")
+    )
+    if historical_summary.get("tested_artifact") != wheel_name:
+        raise AuditFailure(
+            "Historical Experiment 1 summary names the wrong wheel."
+        )
+    if historical_summary.get("tested_artifact_sha256") != historical_sha256:
+        raise AuditFailure(
+            "Historical Experiment 1 checksum has been altered."
+        )
+
+    for name in ("case_100_report.md", "case_1000_report.md"):
+        report = (synthetic / name).read_text(encoding="utf-8")
+        if historical_sha256 not in report:
+            raise AuditFailure(
+                f"Historical checksum is missing from {name}."
+            )
+
 def check_experiment1_record() -> None:
     validation = (
         ROOT / "experiments" / "experiment_1_correctness" / "validation"
@@ -335,6 +509,7 @@ def main() -> int:
         ("Python syntax", check_python_syntax),
         ("relative Markdown links", check_markdown_links),
         ("frozen wheel", check_wheel),
+        ("Experiment 1 artifact provenance", check_experiment1_artifact_provenance),
         ("Experiment 1 record", check_experiment1_record),
         ("Experiment 2 record", check_experiment2_record),
     ]

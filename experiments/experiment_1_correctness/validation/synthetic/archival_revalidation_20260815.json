@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-08-15T01:47:32+12:00",
+  "environment": {
+    "platform": "Linux-4.18.0-553.153.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "python_version": "3.10.14"
+  },
+  "frozen_artifact": {
+    "path": "software/nexcision-0.1.0-py3-none-any.whl",
+    "sha256": "f980aa7e1f4b5ef67ebe10b4117a07af3405ee0cd3805c1d2d9e936a284689d4",
+    "version": "0.1.0"
+  },
+  "historical_provenance": {
+    "checksum_of_wheel_frozen_in_repository": "f980aa7e1f4b5ef67ebe10b4117a07af3405ee0cd3805c1d2d9e936a284689d4",
+    "checksum_recorded_in_original_july_2026_synthetic_records": "e54ed4058f3736a5bc39a79d63dac4e2b43ba62a4a2f3631acc3d749b2ed0ceb",
+    "note": "Repository history shows that the frozen f980aa7e... wheel and its checksum manifest were already present before the July 2026 synthetic validation records containing e54ed405... were committed. Repository history alone cannot establish whether e54ed405... represented an earlier external build used for those original executions. The original records are therefore retained unchanged. This archival revalidation documents a fresh validation of the wheel actually frozen in this repository."
+  },
+  "record_type": "archival_revalidation",
+  "regenerated_1000_case_corpus": {
+    "fresh_sha256": "9ed25d7e2dd4fee380f2f0f32ddcf653694715926905bd54179e7003e64f1c28",
+    "identical": true,
+    "stored_sha256": "9ed25d7e2dd4fee380f2f0f32ddcf653694715926905bd54179e7003e64f1c28"
+  },
+  "repository_commit_revalidated": "5fff3aa03e581ff8644219e75c086ed140522b97",
+  "schema_version": 1,
+  "synthetic_1000_case_revalidation": {
+    "cases": 1000,
+    "cases_passed": 1000,
+    "oracle_agreement": true,
+    "rows_removed": 113740,
+    "rows_retained": 190260,
+    "status": "PASS",
+    "stored_result_comparison": {
+      "all_nonruntime_fields_identical": true,
+      "differing_fields": [
+        "runtime_seconds"
+      ],
+      "fresh_results_sha256": "7a0ec7b5bf4866f2ac5f9757bf05e0fd8d4b903e1e17dd823c5d0a2cb31370cd",
+      "ignored_nondeterministic_fields": [
+        "runtime_seconds"
+      ],
+      "rows_compared": 1000,
+      "stored_results_sha256": "b737e66915223b3d5cc3fa2dad80de8b166df9418cb38b5401f753c52a8f10e4"
+    },
+    "total_site_rows": 304000
+  },
+  "synthetic_100_case_revalidation": {
+    "cases": 100,
+    "cases_passed": 100,
+    "oracle_agreement": true,
+    "rows_removed": 5600,
+    "rows_retained": 9200,
+    "status": "PASS",
+    "stored_result_comparison": {
+      "all_nonruntime_fields_identical": true,
+      "differing_fields": [
+        "runtime_seconds"
+      ],
+      "fresh_results_sha256": "2351b628215673c1c86b12803b8bc6a07939fd2f6b70529510350a7c35a4fb45",
+      "ignored_nondeterministic_fields": [
+        "runtime_seconds"
+      ],
+      "rows_compared": 100,
+      "stored_results_sha256": "4494688c924f09260f186392cd439911c8590f9b3c9d5804fdc0ea81021aab6b"
+    },
+    "total_site_rows": 14800
+  }
+}
