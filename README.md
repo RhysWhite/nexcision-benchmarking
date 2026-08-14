@@ -11,7 +11,9 @@
   <img src="https://img.shields.io/badge/formal%20benchmark-105%2F105-2ea44f" alt="105 of 105 formal benchmark runs passed">
   <img src="https://img.shields.io/badge/mutation%20score-100%25-2ea44f" alt="100 percent mutation score">
   <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License">
+<a href="https://doi.org/10.5281/zenodo.21935597"><img src="https://zenodo.org/badge/1307669540.svg" alt="DOI"></a
 </p>
+
 
 # NEXCISION benchmarking
 
