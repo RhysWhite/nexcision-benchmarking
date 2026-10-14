@@ -1,13 +1,14 @@
 # Figures
 
-Current manuscript figure assets include:
+Manuscript figure numbering is separate from experiment numbering:
 
-1. NEXCISION workflow and file-output concepts under `assets/`.
-2. Experiment 2 runtime, memory, matrix-shape and interval-count panels under
-   `experiment_2/`.
-3. Experiment 2 supplementary interval-geometry, provenance-overhead and
-   run-order quality-control panels.
+1. **Figure 1 — Workflow:** `figure_1_workflow/` (validated schematic and example input/output).
+2. **Figure 2 — Validation:** `figure_2_validation/` (seven evidence layers, Experiment 1).
+3. **Figure 3 — Scalability:** `experiment_2/` (four source panels from Experiment 2).
 
-Store both PNG exports and editable SVG files. The source measurements and
-generation script for Experiment 2 are under
-`experiments/experiment_2_scalability/`.
+The Experiment 2 panels retain their original source filenames beginning
+`figure_2` for provenance. These are assembled as **manuscript Figure 3**.
+Supplementary Figure S2 also uses Experiment 2 sources.
+
+Retain editable SVG, published-resolution PNG, source-rendering code and
+verification instructions alongside each publication figure.
