@@ -5,3 +5,5 @@
 The earlier `figure_2A_runtime_scaling.*` ... `figure_2D_interval_count.*` files in this directory remain unchanged **archival source plots** from the original Experiment 2 analysis. Those historical file names are not the manuscript figure numbering. Panel A of the updated Figure 3 shows the predeclared >=~100 MB log–log fit, rather than the original six-point linear fit whose negative intercept cannot be displayed over the whole data range on logarithmic axes. Panel C uses deliberately noncausal wording for its shape comparison. Do not replace the archived originals.
 
 Regenerate the publication artwork via `python3 manuscript/figures/figure_3_scalability/render_figure3.py` from the benchmarking-repository root.
+
+**Replicate-level revision:** all four publication panels now show every measured run (five per configuration), plus explicit medians, using marker shapes and grayscale-distinguishable visual encoding. The derived artwork is regenerated from immutable measured and summary TSVs. No error-bar-only correction patch is needed.
