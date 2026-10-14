@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="870" viewBox="0 0 1900 870" role="img" aria-labelledby="f-title f-desc">
+<title id="f-title">NEXCISION workflow: coordinate-labelled site row excision</title>
+<desc id="f-desc">Five sequence-character rows across five taxa are supplied. The inclusive interval 18000 through 19000 removes three rows, leaving rows at positions 16000 and 20000 unchanged. The taxon count stays five and the site-character count falls from five to two.</desc>
+<defs>
+ <linearGradient id="wordmark" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#00A59C"/><stop offset="100%" stop-color="#00877F"/></linearGradient>
+ <linearGradient id="softselect" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#E7F6F3"/><stop offset="100%" stop-color="#D7F1EC"/></linearGradient>
+ <filter id="shadow" x="-10%" y="-20%" width="120%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#153c59" flood-opacity="0.07"/></filter>
+ <style>
+    text {font-family:"Liberation Sans","DejaVu Sans",sans-serif;}
+    .logoBlue{font-size:122px;font-weight:700;fill:#0B2C60;letter-spacing:-4px}
+    .logoTeal{font-size:122px;font-weight:700;fill:url(#wordmark);letter-spacing:-3px}
+    .title{font-size:30px;font-weight:700;fill:#0B2C60}
+    .sub{font-size:22px;fill:#008F89}
+    .th{font-size:20px;font-weight:700;fill:#0B2C60}
+    .label{font-size:20px;fill:#0B2C60}
+    .labelgreen{font-size:20px;font-weight:700;fill:#008F89}
+    .base{font-size:23px;font-weight:700;fill:#0B2C60}
+    .basegreen{font-size:23px;font-weight:700;fill:#008F89}
+    .small{font-size:17px;fill:#5B6D83}
+    .mono{font-family:"DejaVu Sans Mono",monospace;}
+ </style>
+</defs>
+<rect x="0" y="0" width="1900" height="870" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1" />
+<text x="60" y="144" class="logoBlue">NEX</text>
+<text x="299" y="144" class="logoTeal">CISION</text>
+<text x="66" y="203" class="label" fill="#0B2C60" font-size="27">Precise removal of coordinate-labelled site rows from transposed NEXUS matrices.</text>
+<line x1="60" y1="232" x2="1840" y2="232" stroke="#DCE9ED" stroke-width="2" stroke-linecap="round"/>
+<text x="65" y="278" class="title">1  Input transposed NEXUS matrix</text>
+<text x="65" y="313" class="sub">Five taxa; five genomic-site rows.</text>
+<text x="735" y="278" class="title">2  Select genomic interval</text>
+<text x="735" y="313" class="sub">1-based inclusive boundaries.</text>
+<text x="1203" y="278" class="title">3  Filtered NEXUS matrix</text>
+<text x="1203" y="313" class="sub">Remaining site rows are unchanged.</text>
+<rect x="60" y="349" width="623" height="390" rx="16" fill="#FFFFFF" stroke="#0B2C60" stroke-width="2" filter="url(#shadow)"/>
+<rect x="1195" y="349" width="642" height="390" rx="16" fill="#FFFFFF" stroke="#0B2C60" stroke-width="2" filter="url(#shadow)"/>
+<text x="82" y="385" class="th">Genomic coordinate (row label)</text>
+<text x="489" y="384" class="th" text-anchor="middle">Taxa (columns)</text>
+<rect x="83" y="397" width="196" height="30" rx="7" fill="#F2F6FA" stroke="none" stroke-width="1" />
+<text x="180" y="417" class="small" text-anchor="middle">NCHAR = 5</text>
+<rect x="287" y="397" width="113" height="30" rx="7" fill="#F2F6FA" stroke="none" stroke-width="1" />
+<text x="343" y="417" class="small" text-anchor="middle">NTAX = 5</text>
+<line x1="305" y1="440" x2="305" y2="703" stroke="#16437B" stroke-width="1.5" stroke-linecap="round"/>
+<rect x="328" y="435" width="55" height="32" rx="5" fill="#ECF3F8" stroke="#D4E1EB" stroke-width="1" />
+<text x="355.5" y="457" class="th" text-anchor="middle">Iso1</text>
+<rect x="391" y="435" width="55" height="32" rx="5" fill="#ECF3F8" stroke="#D4E1EB" stroke-width="1" />
+<text x="418.5" y="457" class="th" text-anchor="middle">Iso2</text>
+<rect x="454" y="435" width="55" height="32" rx="5" fill="#ECF3F8" stroke="#D4E1EB" stroke-width="1" />
+<text x="481.5" y="457" class="th" text-anchor="middle">Iso3</text>
+<rect x="517" y="435" width="55" height="32" rx="5" fill="#ECF3F8" stroke="#D4E1EB" stroke-width="1" />
+<text x="544.5" y="457" class="th" text-anchor="middle">Iso4</text>
+<rect x="580" y="435" width="55" height="32" rx="5" fill="#ECF3F8" stroke="#D4E1EB" stroke-width="1" />
+<text x="607.5" y="457" class="th" text-anchor="middle">Iso5</text>
+<rect x="70" y="525" width="599" height="138" rx="13" fill="url(#softselect)" stroke="#008F89" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="82" y="506" class="label">CP013831_16000</text>
+<rect x="330" y="479" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="355.5" y="506" class="base" text-anchor="middle">A</text>
+<rect x="393" y="479" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="418.5" y="506" class="base" text-anchor="middle">A</text>
+<rect x="456" y="479" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="481.5" y="506" class="base" text-anchor="middle">C</text>
+<rect x="519" y="479" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="544.5" y="506" class="base" text-anchor="middle">G</text>
+<rect x="582" y="479" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="607.5" y="506" class="base" text-anchor="middle">T</text>
+<text x="82" y="552" class="labelgreen">CP013831_18000</text>
+<rect x="330" y="525" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="355.5" y="552" class="basegreen" text-anchor="middle">A</text>
+<rect x="393" y="525" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="418.5" y="552" class="basegreen" text-anchor="middle">G</text>
+<rect x="456" y="525" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="481.5" y="552" class="basegreen" text-anchor="middle">C</text>
+<rect x="519" y="525" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="544.5" y="552" class="basegreen" text-anchor="middle">T</text>
+<rect x="582" y="525" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="607.5" y="552" class="basegreen" text-anchor="middle">G</text>
+<text x="82" y="598" class="labelgreen">CP013831_18500</text>
+<rect x="330" y="571" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="355.5" y="598" class="basegreen" text-anchor="middle">A</text>
+<rect x="393" y="571" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="418.5" y="598" class="basegreen" text-anchor="middle">C</text>
+<rect x="456" y="571" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="481.5" y="598" class="basegreen" text-anchor="middle">G</text>
+<rect x="519" y="571" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="544.5" y="598" class="basegreen" text-anchor="middle">A</text>
+<rect x="582" y="571" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="607.5" y="598" class="basegreen" text-anchor="middle">C</text>
+<text x="82" y="644" class="labelgreen">CP013831_19000</text>
+<rect x="330" y="617" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="355.5" y="644" class="basegreen" text-anchor="middle">G</text>
+<rect x="393" y="617" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="418.5" y="644" class="basegreen" text-anchor="middle">C</text>
+<rect x="456" y="617" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="481.5" y="644" class="basegreen" text-anchor="middle">T</text>
+<rect x="519" y="617" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="544.5" y="644" class="basegreen" text-anchor="middle">T</text>
+<rect x="582" y="617" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="607.5" y="644" class="basegreen" text-anchor="middle">A</text>
+<text x="82" y="690" class="label">CP013831_20000</text>
+<rect x="330" y="663" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="355.5" y="690" class="base" text-anchor="middle">A</text>
+<rect x="393" y="663" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="418.5" y="690" class="base" text-anchor="middle">A</text>
+<rect x="456" y="663" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="481.5" y="690" class="base" text-anchor="middle">C</text>
+<rect x="519" y="663" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="544.5" y="690" class="base" text-anchor="middle">G</text>
+<rect x="582" y="663" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="607.5" y="690" class="base" text-anchor="middle">T</text>
+<text x="81" y="724" class="small">Highlighted: CP013831_18000 to CP013831_19000</text>
+<rect x="738" y="372" width="390" height="174" rx="16" fill="#FFFFFF" stroke="#008F89" stroke-width="2" filter="url(#shadow)"/>
+<text x="933" y="405" class="th" text-anchor="middle">regions.tsv</text>
+<text x="839" y="445" class="labelgreen" text-anchor="middle">start</text>
+<text x="1031" y="445" class="labelgreen" text-anchor="middle">end</text>
+<line x1="766" y1="464" x2="1101" y2="464" stroke="#B7DDD7" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="932" y1="422" x2="932" y2="524" stroke="#C9E7E3" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 4"/>
+<text x="839" y="505" class="basegreen" text-anchor="middle">18000</text>
+<text x="1031" y="505" class="basegreen" text-anchor="middle">19000</text>
+<line x1="766" y1="610" x2="1100" y2="610" stroke="#16437B" stroke-width="3" stroke-linecap="round"/>
+<line x1="766.0" y1="597" x2="766.0" y2="623" stroke="#16437B" stroke-width="1.5" stroke-linecap="round"/>
+<text x="766.0" y="650" class="small" text-anchor="middle">16,000</text>
+<line x1="832.8" y1="597" x2="832.8" y2="623" stroke="#16437B" stroke-width="1.5" stroke-linecap="round"/>
+<text x="832.8" y="650" class="small" text-anchor="middle">17,000</text>
+<line x1="899.6" y1="597" x2="899.6" y2="623" stroke="#16437B" stroke-width="1.5" stroke-linecap="round"/>
+<text x="899.6" y="650" class="small" text-anchor="middle">18,000</text>
+<line x1="966.4" y1="597" x2="966.4" y2="623" stroke="#16437B" stroke-width="1.5" stroke-linecap="round"/>
+<text x="966.4" y="650" class="small" text-anchor="middle">19,000</text>
+<line x1="1033.2" y1="597" x2="1033.2" y2="623" stroke="#16437B" stroke-width="1.5" stroke-linecap="round"/>
+<text x="1033.2" y="650" class="small" text-anchor="middle">20,000</text>
+<line x1="1100.0" y1="597" x2="1100.0" y2="623" stroke="#16437B" stroke-width="1.5" stroke-linecap="round"/>
+<text x="1100.0" y="650" class="small" text-anchor="middle">21,000</text>
+<line x1="899.6" y1="610" x2="966.4" y2="610" stroke="#008F89" stroke-width="9" stroke-linecap="round"/>
+<circle cx="899.6" cy="610" r="10" fill="#008F89" stroke="white" stroke-width="2"/>
+<circle cx="966.4" cy="610" r="10" fill="#008F89" stroke="white" stroke-width="2"/>
+<text x="933" y="685" class="labelgreen" text-anchor="middle">18,000–19,000 (inclusive)</text>
+<text x="933" y="716" class="small" text-anchor="middle">Matches 3 labelled site rows</text>
+<path d="M 696 560 h 24 m -11 -12 l 13 12 -13 12" fill="none" stroke="#0B2C60" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1151 560 h 24 m -11 -12 l 13 12 -13 12" fill="none" stroke="#0B2C60" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1219" y="385" class="th">Genomic coordinate (row label)</text>
+<text x="1627" y="384" class="th" text-anchor="middle">Taxa (columns)</text>
+<rect x="1218" y="397" width="197" height="30" rx="7" fill="#F2F6FA" stroke="none" stroke-width="1" />
+<text x="1316.5" y="417" class="small" text-anchor="middle">NCHAR = 2</text>
+<rect x="1423" y="397" width="114" height="30" rx="7" fill="#F2F6FA" stroke="none" stroke-width="1" />
+<text x="1480" y="417" class="small" text-anchor="middle">NTAX = 5</text>
+<line x1="1455" y1="440" x2="1455" y2="661" stroke="#16437B" stroke-width="1.5" stroke-linecap="round"/>
+<rect x="1481" y="435" width="60" height="32" rx="5" fill="#ECF3F8" stroke="#D4E1EB" stroke-width="1" />
+<text x="1511" y="457" class="th" text-anchor="middle">Iso1</text>
+<rect x="1548" y="435" width="60" height="32" rx="5" fill="#ECF3F8" stroke="#D4E1EB" stroke-width="1" />
+<text x="1578" y="457" class="th" text-anchor="middle">Iso2</text>
+<rect x="1615" y="435" width="60" height="32" rx="5" fill="#ECF3F8" stroke="#D4E1EB" stroke-width="1" />
+<text x="1645" y="457" class="th" text-anchor="middle">Iso3</text>
+<rect x="1682" y="435" width="60" height="32" rx="5" fill="#ECF3F8" stroke="#D4E1EB" stroke-width="1" />
+<text x="1712" y="457" class="th" text-anchor="middle">Iso4</text>
+<rect x="1749" y="435" width="60" height="32" rx="5" fill="#ECF3F8" stroke="#D4E1EB" stroke-width="1" />
+<text x="1779" y="457" class="th" text-anchor="middle">Iso5</text>
+<text x="1219" y="530" class="label">CP013831_16000</text>
+<rect x="1485" y="503" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="1510.5" y="530" class="base" text-anchor="middle">A</text>
+<rect x="1552" y="503" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="1577.5" y="530" class="base" text-anchor="middle">A</text>
+<rect x="1619" y="503" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="1644.5" y="530" class="base" text-anchor="middle">C</text>
+<rect x="1686" y="503" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="1711.5" y="530" class="base" text-anchor="middle">G</text>
+<rect x="1753" y="503" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="1778.5" y="530" class="base" text-anchor="middle">T</text>
+<text x="1219" y="614" class="label">CP013831_20000</text>
+<rect x="1485" y="587" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="1510.5" y="614" class="base" text-anchor="middle">A</text>
+<rect x="1552" y="587" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="1577.5" y="614" class="base" text-anchor="middle">A</text>
+<rect x="1619" y="587" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="1644.5" y="614" class="base" text-anchor="middle">C</text>
+<rect x="1686" y="587" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="1711.5" y="614" class="base" text-anchor="middle">G</text>
+<rect x="1753" y="587" width="51" height="39" rx="6" fill="#FFFFFF" stroke="#DAE5EB" stroke-width="1.1" />
+<text x="1778.5" y="614" class="base" text-anchor="middle">T</text>
+<line x1="1219" y1="650" x2="1811" y2="650" stroke="#DAE6EE" stroke-width="1.5" stroke-linecap="round"/>
+<text x="1220" y="680" class="small">Retained row labels, order and states are identical.</text>
+<text x="1220" y="711" class="small">Dimensions: NCHAR 5 → 2; NTAX stays 5.</text>
+<rect x="720" y="761" width="472" height="60" rx="13" fill="#E7F5F2" stroke="#008F89" stroke-width="1.8" />
+<text x="956" y="798" class="labelgreen" text-anchor="middle">3 rows removed   ·   2 rows retained</text>
+<text x="949" y="851" class="small" text-anchor="middle">Illustrative, exact example: one reference-coordinate axis (CP013831).</text>
+</svg>
