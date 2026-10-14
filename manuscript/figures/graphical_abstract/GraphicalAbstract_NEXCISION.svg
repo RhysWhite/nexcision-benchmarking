@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="1350px" version="1.1" viewBox="0 0 2400 1350" width="2400px">
+  <defs/>
+  <rect fill="#ffffff" height="1350" width="2400" x="0" y="0"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="132" font-weight="700" text-anchor="start" x="43" y="143">NEX</text>
+  <text fill="#008f89" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="132" font-weight="700" text-anchor="start" x="335" y="143">CISION</text>
+  <line stroke="#c8dce9" stroke-linecap="round" stroke-width="4" x1="873" x2="873" y1="48" y2="181"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="47" font-weight="700" text-anchor="start" x="927" y="89">Reproducible site excision</text>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="47" font-weight="700" text-anchor="start" x="927" y="151">from transposed NEXUS matrices</text>
+  <text fill="#55708b" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="28" font-weight="400" text-anchor="start" x="929" y="201">Exact, auditable filtering of reference-defined genomic sites.</text>
+  <rect fill="#ffffff" height="745" rx="18" ry="18" stroke="#c8dce9" stroke-width="2" width="520" x="40" y="235"/>
+  <rect fill="#103463" height="101" rx="18" ry="18" width="520" x="40" y="235"/>
+  <rect fill="#103463" height="79" rx="0" ry="0" width="520" x="40" y="257"/>
+  <circle cx="92" cy="286" fill="#ffffff" r="30"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="middle" x="92" y="296">1</text>
+  <text fill="#ffffff" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="start" x="143" y="282">The problem</text>
+  <rect fill="#ffffff" height="745" rx="18" ry="18" stroke="#c8dce9" stroke-width="2" width="520" x="640" y="235"/>
+  <rect fill="#103463" height="101" rx="18" ry="18" width="520" x="640" y="235"/>
+  <rect fill="#103463" height="79" rx="0" ry="0" width="520" x="640" y="257"/>
+  <circle cx="692" cy="286" fill="#ffffff" r="30"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="middle" x="692" y="296">2</text>
+  <text fill="#ffffff" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="start" x="743" y="282">Define the exclusion</text>
+  <rect fill="#ffffff" height="745" rx="18" ry="18" stroke="#c8dce9" stroke-width="2" width="520" x="1240" y="235"/>
+  <rect fill="#103463" height="101" rx="18" ry="18" width="520" x="1240" y="235"/>
+  <rect fill="#103463" height="79" rx="0" ry="0" width="520" x="1240" y="257"/>
+  <circle cx="1292" cy="286" fill="#ffffff" r="30"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="middle" x="1292" y="296">3</text>
+  <text fill="#ffffff" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="start" x="1343" y="282">Exact site excision</text>
+  <rect fill="#ffffff" height="745" rx="18" ry="18" stroke="#c8dce9" stroke-width="2" width="520" x="1840" y="235"/>
+  <rect fill="#103463" height="101" rx="18" ry="18" width="520" x="1840" y="235"/>
+  <rect fill="#103463" height="79" rx="0" ry="0" width="520" x="1840" y="257"/>
+  <circle cx="1892" cy="286" fill="#ffffff" r="30"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="middle" x="1892" y="296">4</text>
+  <text fill="#ffffff" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="start" x="1943" y="282">Integrate into your</text>
+  <text fill="#ffffff" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="start" x="1943" y="319">pipeline</text>
+  <line stroke="#103463" stroke-linecap="round" stroke-width="7" x1="568" x2="615" y1="633" y2="633"/>
+  <polyline fill="none" points="603,620 619,633 603,646" stroke="#103463" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+  <line stroke="#103463" stroke-linecap="round" stroke-width="7" x1="1168" x2="1215" y1="633" y2="633"/>
+  <polyline fill="none" points="1203,620 1219,633 1203,646" stroke="#103463" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+  <line stroke="#103463" stroke-linecap="round" stroke-width="7" x1="1768" x2="1815" y1="633" y2="633"/>
+  <polyline fill="none" points="1803,620 1819,633 1803,646" stroke="#103463" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start" x="65" y="377">Ad hoc edits risk wrong site removal</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start" x="65" y="416">and inconsistent matrix dimensions.</text>
+  <rect fill="#ffffff" height="417" rx="10" ry="10" stroke="#c8dce9" stroke-width="2" width="473" x="64" y="463"/>
+  <rect fill="#edf5fa" height="67" rx="10" ry="10" width="471" x="65" y="464"/>
+  <rect fill="#edf5fa" height="44" rx="0" ry="0" width="471" x="65" y="487"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start" x="77" y="489">Genomic coordinate</text>
+  <text fill="#55708b" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="start" x="77" y="516">(row label)</text>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle" x="416" y="489">Taxa</text>
+  <line stroke="#c8dce9" stroke-linecap="round" stroke-width="2" x1="283" x2="283" y1="463" y2="880"/>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" x="314" y="520">Iso1</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" x="357" y="520">Iso2</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" x="400" y="520">Iso3</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" x="443" y="520">Iso4</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" x="486" y="520">Iso5</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" x="76" y="570">CP013831_16000</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="294" y="541"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="312.5" y="570">A</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="337" y="541"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="355.5" y="570">A</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="380" y="541"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="398.5" y="570">C</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="423" y="541"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="441.5" y="570">G</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="466" y="541"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="484.5" y="570">T</text>
+  <line stroke="#c8dce9" stroke-linecap="round" stroke-width="1" x1="66" x2="535" y1="590" y2="590"/>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" x="76" y="628">CP013831_17000</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="294" y="599"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="312.5" y="628">A</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="337" y="599"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="355.5" y="628">G</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="380" y="599"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="398.5" y="628">C</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="423" y="599"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="441.5" y="628">T</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="466" y="599"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="484.5" y="628">A</text>
+  <rect fill="#edf7f6" height="54" rx="0" ry="0" width="467" x="67" y="650"/>
+  <line stroke="#c8dce9" stroke-linecap="round" stroke-width="1" x1="66" x2="535" y1="648" y2="648"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="start" x="76" y="686">CP013831_18000</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="294" y="657"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="312.5" y="686">A</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="337" y="657"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="355.5" y="686">G</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="380" y="657"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="398.5" y="686">C</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="423" y="657"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="441.5" y="686">T</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="466" y="657"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="484.5" y="686">G</text>
+  <rect fill="#edf7f6" height="54" rx="0" ry="0" width="467" x="67" y="708"/>
+  <line stroke="#c8dce9" stroke-linecap="round" stroke-width="1" x1="66" x2="535" y1="706" y2="706"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="start" x="76" y="744">CP013831_18500</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="294" y="715"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="312.5" y="744">A</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="337" y="715"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="355.5" y="744">C</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="380" y="715"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="398.5" y="744">G</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="423" y="715"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="441.5" y="744">A</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="466" y="715"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="484.5" y="744">C</text>
+  <rect fill="#edf7f6" height="54" rx="0" ry="0" width="467" x="67" y="766"/>
+  <line stroke="#c8dce9" stroke-linecap="round" stroke-width="1" x1="66" x2="535" y1="764" y2="764"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="start" x="76" y="802">CP013831_19000</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="294" y="773"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="312.5" y="802">G</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="337" y="773"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="355.5" y="802">C</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="380" y="773"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="398.5" y="802">T</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="423" y="773"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="441.5" y="802">T</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="466" y="773"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="484.5" y="802">A</text>
+  <line stroke="#c8dce9" stroke-linecap="round" stroke-width="1" x1="66" x2="535" y1="822" y2="822"/>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" x="76" y="860">CP013831_20000</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="294" y="831"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="312.5" y="860">A</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="337" y="831"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="355.5" y="860">A</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="380" y="831"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="398.5" y="860">C</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="423" y="831"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="441.5" y="860">G</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="466" y="831"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="484.5" y="860">T</text>
+  <rect fill="#fff4e8" height="52" rx="8" ry="8" width="469" x="66" y="906"/>
+  <text fill="#aa4960" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="start" x="82" y="940">3 site rows fall within the exclusion</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start" x="665" y="377">Supply genomic intervals</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start" x="665" y="416">using 1-based inclusive coordinates.</text>
+  <rect fill="#ffffff" height="140" rx="14" ry="14" stroke="#008f89" stroke-width="3" width="438" x="680" y="474"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="31" font-weight="700" text-anchor="middle" x="899" y="511">regions.tsv</text>
+  <line stroke="#c8dce9" stroke-linecap="round" stroke-width="2" x1="706" x2="1094" y1="529" y2="529"/>
+  <text fill="#008f89" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="26" font-weight="700" text-anchor="middle" x="766" y="558">start</text>
+  <text fill="#008f89" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="26" font-weight="700" text-anchor="middle" x="1031" y="558">end</text>
+  <line stroke="#c8dce9" stroke-dasharray="6,6" stroke-linecap="round" stroke-width="2" x1="903" x2="903" y1="537" y2="601"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="31" font-weight="700" text-anchor="middle" x="766" y="596">18000</text>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="31" font-weight="700" text-anchor="middle" x="1031" y="596">19000</text>
+  <line stroke="#103463" stroke-linecap="round" stroke-width="4" x1="712" x2="1080" y1="696" y2="696"/>
+  <line stroke="#103463" stroke-linecap="round" stroke-width="2" x1="712.0" x2="712.0" y1="682" y2="710"/>
+  <text fill="#55708b" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="middle" x="712.0" y="739">16,000</text>
+  <line stroke="#103463" stroke-linecap="round" stroke-width="2" x1="785.6" x2="785.6" y1="682" y2="710"/>
+  <line stroke="#103463" stroke-linecap="round" stroke-width="2" x1="859.2" x2="859.2" y1="682" y2="710"/>
+  <circle cx="859.2" cy="696" fill="#008f89" r="11" stroke="#ffffff" stroke-width="2"/>
+  <text fill="#55708b" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="middle" x="859.2" y="739">18,000</text>
+  <line stroke="#103463" stroke-linecap="round" stroke-width="2" x1="932.8" x2="932.8" y1="682" y2="710"/>
+  <circle cx="932.8" cy="696" fill="#008f89" r="11" stroke="#ffffff" stroke-width="2"/>
+  <line stroke="#103463" stroke-linecap="round" stroke-width="2" x1="1006.4" x2="1006.4" y1="682" y2="710"/>
+  <text fill="#55708b" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="middle" x="1006.4" y="739">20,000</text>
+  <line stroke="#103463" stroke-linecap="round" stroke-width="2" x1="1080.0" x2="1080.0" y1="682" y2="710"/>
+  <line stroke="#008f89" stroke-linecap="round" stroke-width="12" x1="859.2" x2="932.8" y1="696" y2="696"/>
+  <circle cx="859.2" cy="696" fill="#008f89" r="11" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="932.8" cy="696" fill="#008f89" r="11" stroke="#ffffff" stroke-width="2"/>
+  <text fill="#008f89" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" x="900" y="790">18,000–19,000 (inclusive)</text>
+  <rect fill="#edf7f6" height="94" rx="10" ry="10" stroke="#c8dce9" stroke-width="1" width="440" x="678" y="841"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" x="900" y="877">Shared reference-coordinate axis</text>
+  <text fill="#55708b" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="23" font-weight="400" text-anchor="middle" x="900" y="913">No contig-aware intervals</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start" x="1265" y="377">Matching site rows are removed;</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start" x="1265" y="416">retained states and order stay intact.</text>
+  <rect fill="#ffffff" height="243" rx="10" ry="10" stroke="#c8dce9" stroke-width="2" width="473" x="1263" y="490"/>
+  <rect fill="#edf5fa" height="67" rx="10" ry="10" width="471" x="1264" y="491"/>
+  <rect fill="#edf5fa" height="44" rx="0" ry="0" width="471" x="1264" y="514"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="start" x="1276" y="516">Genomic coordinate</text>
+  <text fill="#55708b" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="21" font-weight="400" text-anchor="start" x="1276" y="543">(row label)</text>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle" x="1615" y="516">Taxa</text>
+  <line stroke="#c8dce9" stroke-linecap="round" stroke-width="2" x1="1482" x2="1482" y1="490" y2="733"/>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" x="1513" y="547">Iso1</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" x="1556" y="547">Iso2</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" x="1599" y="547">Iso3</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" x="1642" y="547">Iso4</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" x="1685" y="547">Iso5</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" x="1275" y="597">CP013831_16000</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="1493" y="568"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="1511.5" y="597">A</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="1536" y="568"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="1554.5" y="597">A</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="1579" y="568"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="1597.5" y="597">C</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="1622" y="568"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="1640.5" y="597">G</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="1665" y="568"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="1683.5" y="597">T</text>
+  <line stroke="#c8dce9" stroke-linecap="round" stroke-width="1" x1="1265" x2="1734" y1="617" y2="617"/>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" x="1275" y="655">CP013831_17000</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="1493" y="626"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="1511.5" y="655">A</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="1536" y="626"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="1554.5" y="655">G</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="1579" y="626"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="1597.5" y="655">C</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="1622" y="626"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="1640.5" y="655">T</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="1665" y="626"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="1683.5" y="655">A</text>
+  <line stroke="#c8dce9" stroke-linecap="round" stroke-width="1" x1="1265" x2="1734" y1="675" y2="675"/>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" x="1275" y="713">CP013831_20000</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="1493" y="684"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="1511.5" y="713">A</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="1536" y="684"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="1554.5" y="713">A</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="1579" y="684"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="1597.5" y="713">C</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="1622" y="684"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="1640.5" y="713">G</text>
+  <rect fill="#ffffff" height="41" rx="6" ry="6" stroke="#c8dce9" stroke-width="1" width="37" x="1665" y="684"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="1683.5" y="713">T</text>
+  <rect fill="#edf7f6" height="65" rx="8" ry="8" width="469" x="1265" y="758"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="31" font-weight="700" text-anchor="middle" x="1499" y="801">3 removed  ·  3 retained</text>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="26" font-weight="700" text-anchor="middle" x="1499" y="869">NCHAR  6 → 3    |    NTAX  5 → 5</text>
+  <text fill="#55708b" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" x="1269" y="921">Compatible independent NEXUS blocks</text>
+  <text fill="#55708b" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="start" x="1269" y="952">are preserved; unsafe metadata is rejected.</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start" x="1865" y="377">Command-line integration for shell</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start" x="1865" y="416">and Snakemake workflows.</text>
+  <rect fill="#edf5fa" height="92" rx="12" ry="12" stroke="#c8dce9" stroke-width="2" width="438" x="1881" y="464"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="26" font-weight="700" text-anchor="middle" x="2100" y="504">input.nex + regions.tsv</text>
+  <text fill="#55708b" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle" x="2100" y="535">Supported matrix + intervals</text>
+  <line stroke="#008f89" stroke-linecap="round" stroke-width="5" x1="2100" x2="2100" y1="561" y2="586"/>
+  <polyline fill="none" points="2091,578 2100,588 2109,578" stroke="#008f89" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <rect fill="#edf7f6" height="83" rx="12" ry="12" stroke="#008f89" stroke-width="3" width="438" x="1881" y="601"/>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="38" font-weight="700" text-anchor="middle" x="2100" y="653">NEXCISION</text>
+  <line stroke="#008f89" stroke-linecap="round" stroke-width="5" x1="2100" x2="2100" y1="690" y2="716"/>
+  <polyline fill="none" points="2091,708 2100,718 2109,708" stroke="#008f89" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <rect fill="#edf5fa" height="105" rx="12" ry="12" stroke="#c8dce9" stroke-width="2" width="438" x="1881" y="733"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="29" font-weight="700" text-anchor="middle" x="2100" y="773">filtered.nex</text>
+  <text fill="#55708b" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="middle" x="2100" y="807">Optional counts + SHA-256 report</text>
+  <line stroke="#008f89" stroke-linecap="round" stroke-width="5" x1="2100" x2="2100" y1="845" y2="869"/>
+  <polyline fill="none" points="2091,861 2100,871 2109,861" stroke="#008f89" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <rect fill="#ffffff" height="70" rx="12" ry="12" stroke="#c8dce9" stroke-width="2" width="438" x="1881" y="885"/>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="middle" x="2100" y="930">Downstream phylogenomics</text>
+  <rect fill="#edf7f6" height="180" rx="14" ry="14" stroke="#c8dce9" stroke-width="2" width="734" x="40" y="1006"/>
+  <rect fill="#edf5fa" height="180" rx="14" ry="14" stroke="#c8dce9" stroke-width="2" width="734" x="833" y="1006"/>
+  <rect fill="#edf7f6" height="180" rx="14" ry="14" stroke="#c8dce9" stroke-width="2" width="734" x="1626" y="1006"/>
+  <circle cx="97" cy="1068" fill="#008f89" r="24"/>
+  <text fill="#ffffff" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" x="97" y="1078">✓</text>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="31" font-weight="700" text-anchor="start" x="143" y="1058">Independent validation</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="24" font-weight="400" text-anchor="start" x="143" y="1103">Naïve oracle · 1,000 synthetic matrices</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="24" font-weight="400" text-anchor="start" x="143" y="1136">12/12 deliberate faults detected</text>
+  <circle cx="888" cy="1068" fill="#103463" r="24"/>
+  <text fill="#ffffff" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" x="888" y="1078">↗</text>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="30" font-weight="700" text-anchor="start" x="930" y="1058">Multi-gigabyte performance</text>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="30" font-weight="700" text-anchor="start" x="930" y="1105">4.83 GiB in 24.24 s</text>
+  <text fill="#55708b" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start" x="930" y="1147">v0.1.0 · 1 pinned CPU · ~23.4 GiB peak RSS</text>
+  <circle cx="1680" cy="1068" fill="#008f89" r="24"/>
+  <text fill="#ffffff" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="33" font-weight="700" text-anchor="middle" x="1680" y="1078">→</text>
+  <text fill="#103463" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="31" font-weight="700" text-anchor="start" x="1723" y="1058">Auditable provenance</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="24" font-weight="400" text-anchor="start" x="1723" y="1103">Per-interval counts when requested</text>
+  <text fill="#173a61" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="24" font-weight="400" text-anchor="start" x="1723" y="1136">Optional report with SHA-256 checksums</text>
+  <line stroke="#c8dce9" stroke-linecap="round" stroke-width="2" x1="40" x2="2360" y1="1218" y2="1218"/>
+  <text fill="#55708b" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="24" font-weight="400" text-anchor="start" x="40" y="1268">Scope: supported transposed NEXUS matrices with a single reference-coordinate axis.</text>
+  <text fill="#087f7a" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="27" font-weight="700" text-anchor="end" x="2360" y="1268">github.com/RhysWhite/nexcision</text>
+  <text fill="#55708b" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" font-size="20" font-weight="400" text-anchor="start" x="40" y="1311">Illustrative matrix example; validation and performance results refer to the frozen v0.1.0 release.</text>
+</svg>
