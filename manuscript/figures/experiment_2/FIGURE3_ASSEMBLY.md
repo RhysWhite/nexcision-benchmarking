@@ -1,18 +1,7 @@
-# Figure 3 assembly — Experiment 2 scalability
+# Figure 3 assembly and historical plots
 
-Recommended manuscript composition:
+**Publication assets** are now in `manuscript/figures/figure_3_scalability/` (four separate panels plus a 2 × 2 composite, editable SVG and 300-dpi PNG, with verification and generation scripts). The legend is `manuscript/figure_legends/FIGURE3_LEGEND.md`.
 
-```text
-A  Runtime vs input size      B  Peak memory vs input size
-C  Matrix-shape effect        D  Interval-count scaling
-```
+The earlier `figure_2A_runtime_scaling.*` ... `figure_2D_interval_count.*` files in this directory remain unchanged **archival source plots** from the original Experiment 2 analysis. Those historical file names are not the manuscript figure numbering. Panel A of the updated Figure 3 shows the predeclared >=~100 MB log–log fit, rather than the original six-point linear fit whose negative intercept cannot be displayed over the whole data range on logarithmic axes. Panel C uses deliberately noncausal wording for its shape comparison. Do not replace the archived originals.
 
-The source panels retain their historical `figure_2A_*`, `figure_2B_*`,
-`figure_2C_*`, and `figure_2D_*` filenames from Experiment 2. These form
-**manuscript Figure 3**. Do not confuse Experiment 2 with manuscript Figure 2,
-which is the seven-layer validation stack from Experiment 1.
-
-Use SVGs for final assembly, aligning plotting areas and adding A–D labels.
-Interval-geometry, provenance-overhead and run-order plots are Supplementary
-Figure S2. The original source images remain untouched pending the separate
-Figure 3 plot audit.
+Regenerate the publication artwork via `python3 manuscript/figures/figure_3_scalability/render_figure3.py` from the benchmarking-repository root.
